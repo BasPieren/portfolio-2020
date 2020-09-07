@@ -1,13 +1,19 @@
 <template>
 	<section class="hero">
-		<h1>Hallo.</h1>
 		<div class="hero__left">
+			<h2>
+				Hallo.
+			</h2>
 			<p>
 				Hi! Ik ben <span>Bas</span>, Front-end Developer, recent afgestudeerd <span>Communication and Multimedia Design</span>
 				aan de HvA en opzoek naar een nieuwe uitdaging.
 			</p>
 		</div>
-		<div class="hero__right"></div>
+		<div class="hero__right">
+			<h2>
+				Hallo.
+			</h2>
+		</div>
 	</section>
 </template>
 
@@ -19,27 +25,40 @@ export default {
 
 <style lang="scss">
 .hero {
-	position: relative;
 	display: flex;
 	height: 100vh;
-	h1 {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-	}
 	&__left {
+		position: relative;
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-end;
-		padding: 0 5rem 10rem 15rem;
+		padding: 0 8vw 8vw 12.5vw;
 		width: 50vw;
 		height: 100%;
+		overflow: hidden;
+		h2 {
+			position: absolute;
+			top: 50%;
+			right: 0;
+			transform: translate(50%, -50%);
+			z-index: 4;
+		}
 	}
 	&__right {
+		position: relative;
 		width: 50vw;
 		height: 100%;
 		background-color: var(--folio-purple);
+		overflow: hidden;
+		h2 {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translate(-50%, -50%);
+			color: transparent;
+			-webkit-text-stroke: 0.25rem var(--light);
+			z-index: 3;
+		}
 	}
 }
 </style>

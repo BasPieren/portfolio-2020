@@ -35,7 +35,7 @@ export default {
 	align-items: center;
 	right: 0;
 	left: 0;
-	padding: 4rem 10rem;
+	padding: 3.75rem 8vw;
 	z-index: 4;
 	&__nav {
 		display: flex;
