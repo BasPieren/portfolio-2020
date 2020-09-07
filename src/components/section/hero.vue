@@ -1,18 +1,18 @@
 <template>
 	<section class="hero">
 		<div class="hero__left">
-			<h2>
+			<!-- <h2>
 				Hallo.
-			</h2>
+			</h2> -->
 			<p>
 				Hi! Ik ben <span>Bas</span>, Front-end Developer, recent afgestudeerd <span>Communication and Multimedia Design</span>
 				aan de HvA en opzoek naar een nieuwe uitdaging.
 			</p>
 		</div>
 		<div class="hero__right">
-			<h2>
+			<!-- <h2>
 				Hallo.
-			</h2>
+			</h2> -->
 		</div>
 	</section>
 </template>
@@ -35,7 +35,6 @@ export default {
 		padding: 0 8vw 8vw 12.5vw;
 		width: 50vw;
 		height: 100%;
-		overflow: hidden;
 		h2 {
 			position: absolute;
 			top: 50%;
@@ -49,7 +48,6 @@ export default {
 		width: 50vw;
 		height: 100%;
 		background-color: var(--folio-purple);
-		overflow: hidden;
 		h2 {
 			position: absolute;
 			top: 50%;
