@@ -1,0 +1,43 @@
+{
+	"work": [
+		{
+			"name": "Ride Out",
+			"pay-off": "Here to connect and inspire.",
+			"tags": [
+				"Nuxt",
+				"SCSS",
+				"Wordpress"
+			],
+			"images": [
+				{
+					"name": "Ride-Out-1.jpg",
+					"alt": "Dit is een test"
+				}
+			] 
+		},
+		{
+			"name": "JAN&copy;",
+			"pay-off": "Op JAN&copy; kun je rekenen",
+			"tags": [
+				"Nuxt",
+				"SCSS",
+				"Wordpress"
+			],
+			"images": [
+				"Ride-Out-1.jpg"
+			] 
+		},
+		{
+			"name": "Go Your Own Way",
+			"pay-off": "Lorem ipsum dolor sit amet.",
+			"tags": [
+				"PHP",
+				"SCSS",
+				"Wordpress"
+			],
+			"images": [
+				"Ride-Out-1.jpg"
+			] 
+		}
+	]
+}

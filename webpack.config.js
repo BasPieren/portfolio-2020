@@ -1,16 +1,45 @@
+'use strict'
+
+const webpack = require('webpack')
+const { VueLoaderPlugin } = require('vue-loader')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+
 module.exports = {
+	mode: 'development',
+	devServer: {
+		hot: true,
+		watchOptions: {
+			poll: true
+		}
+	},
 	module: {
-		loaders: [
+		rules: [
 			{
 				test: /\.vue$/,
-				loader: 'vue'
+				use: 'vue-loader'
 			},
 			{
 				test: /\.s[a|c]ss$/,
-				loader: 'style!css!sass'
+				use: [
+					'style-loader',
+					'css-loader',
+					'sass-loader'
+				],
 			},
 			{
-				test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+				test: /\.(png|svg|jpg|gif)$/,
+				use: [
+					{
+						loader: 'file-loader',
+						options: {
+							name: '[name].[ext]',
+							outputPath: 'images/'
+						}
+					}
+				],
+			},
+			{
+				test: /\.(woff|woff2|eot|ttf|otf)$/,
 				use: [
 					{
 						loader: 'file-loader',
@@ -19,13 +48,17 @@ module.exports = {
 							outputPath: 'fonts/'
 						}
 					}
-				]
-			}
+				],
+			},
 		]
 	},
-	vue: {
-		loaders: {
-			scss: 'style!css!sass'
-		}
-	}
+	plugins: [
+		new webpack.HotModuleReplacementPlugin(),
+		new VueLoaderPlugin(),
+		new HtmlWebpackPlugin({
+			filename: 'index.html',
+			template: 'index.html',
+			inject: true
+		})
+	]
 }

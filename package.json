@@ -1,50 +1,60 @@
 {
-  "name": "portfolio-2020",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "svg-icons": "vsvg -s src/assets/icons -t src/components/icons"
-  },
-  "dependencies": {
-    "core-js": "^3.6.5",
-    "vue": "^2.6.12",
-    "vue-svgicon": "^3.2.6"
-  },
-  "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.5.4",
-    "@vue/cli-plugin-eslint": "^4.5.4",
-    "@vue/cli-service": "^4.5.4",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^6.2.2",
-    "file-loader": "^6.1.0",
-    "node-sass": "^4.14.1",
-    "sass-loader": "^8.0.2",
-    "style-loader": "^1.2.1",
-    "ttf-loader": "^1.0.2",
-    "vue-template-compiler": "^2.6.12",
-    "webpack": "^4.44.1"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
-    ],
-    "parserOptions": {
-      "parser": "babel-eslint"
-    },
-    "rules": {}
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
-  ]
+	"name": "portfolio-2020",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"serve": "vue-cli-service serve",
+		"lint": "vue-cli-service lint",
+		"dev": "webpack-dev-server --config webpack.config.js",
+		"build": "webpack --config webpack.config.js",
+		"svg-icons": "vsvg -s src/assets/icons -t src/components/icons"
+	},
+	"dependencies": {
+		"core-js": "^3.6.5",
+		"vue": "^2.6.12",
+		"vue-svgicon": "^3.2.6"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.11.6",
+		"@babel/preset-env": "^7.11.5",
+		"@vue/cli-plugin-babel": "^4.5.4",
+		"@vue/cli-plugin-eslint": "^4.5.4",
+		"@vue/cli-service": "^4.5.4",
+		"babel-eslint": "^10.1.0",
+		"babel-loader": "^8.1.0",
+		"css-loader": "^4.2.2",
+		"eslint": "^6.7.2",
+		"eslint-plugin-vue": "^6.2.2",
+		"file-loader": "^6.1.0",
+		"html-webpack-plugin": "^4.4.1",
+		"node-sass": "^4.14.1",
+		"sass-loader": "^8.0.2",
+		"style-loader": "^1.2.1",
+		"ttf-loader": "^1.0.2",
+		"vue-loader": "^15.9.3",
+		"vue-style-loader": "^4.1.2",
+		"vue-template-compiler": "^2.6.12",
+		"webpack": "^4.44.1",
+		"webpack-cli": "^3.3.12",
+		"webpack-dev-server": "^3.11.0"
+	},
+	"eslintConfig": {
+		"root": true,
+		"env": {
+			"node": true
+		},
+		"extends": [
+			"plugin:vue/essential",
+			"eslint:recommended"
+		],
+		"parserOptions": {
+			"parser": "babel-eslint"
+		},
+		"rules": {}
+	},
+	"browserslist": [
+		"> 1%",
+		"last 2 versions",
+		"not dead"
+	]
 }
