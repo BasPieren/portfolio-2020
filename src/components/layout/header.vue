@@ -40,8 +40,6 @@ export default {
 	&__nav {
 		display: flex;
 		justify-content: space-between;
-		padding: 0;
-		list-style: none;
 		width: 25%;
 	}
 	&__link {
