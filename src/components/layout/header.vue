@@ -4,12 +4,12 @@
 		<ul class="header__nav">
 			<li class="header__item">
 				<a class="header__link" href="#">
-					Work.
+					Werk.
 				</a>
 			</li>
 			<li class="header__item">
 				<a class="header__link" href="#">
-					About.
+					Over.
 				</a>
 			</li>
 			<li class="header__item">

@@ -1,6 +1,18 @@
 <template>
 	<section class="overlay">
 		<div class="overlay__left">
+			<ul class="language__list">
+				<li class="language__item">
+					<button class="language__button">
+						NL.
+					</button>
+				</li>
+				<li class="language__item">
+					<button class="language__button">
+						EN.
+					</button>
+				</li>
+			</ul>
 		</div>
 		<div class="overlay__right">
 			<ul class="social__list">
@@ -44,6 +56,10 @@ export default {
 	z-index: 3;
 	&__left {
 		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+		padding: 0 0 0 8vw;
 		width: 50vw;
 		height: 100%;
 	}
@@ -55,6 +71,24 @@ export default {
 		padding: 0 8vw 0 0;
 		width: 50vw;
 		height: 100%;
+	}
+}
+
+.language {
+	&__list {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 10%;
+	}
+	&__button {
+		background-color: rgba(0,0,0,0);
+		border: none;
+		transition: 0.4s;
+		&:hover {
+			transform: scale(1.2);
+			cursor: pointer;
+		}
 	}
 }
 
