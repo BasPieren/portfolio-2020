@@ -1,7 +1,7 @@
 <template>
 	<div id="app">
 		<LayoutHeader />
-		<Overlay />
+		<!-- <Overlay /> -->
 		<Hero />
 		<Work />
 		<LayoutFooter />
