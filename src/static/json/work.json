@@ -1,7 +1,7 @@
 {
 	"work": [
 		{
-			"name": "Ride Out",
+			"name": "Ride Out.",
 			"pay-off": "Here to connect and inspire.",
 			"tags": [
 				"Nuxt",
@@ -11,33 +11,42 @@
 			"images": [
 				{
 					"name": "Ride-Out-1.jpg",
-					"alt": "Dit is een test"
+					"alt": "Dit is een test",
+					"src": "rideout"
 				}
-			] 
+			]
 		},
 		{
-			"name": "JAN&copy;",
-			"pay-off": "Op JAN&copy; kun je rekenen",
+			"name": "JAN©",
+			"pay-off": "Op JAN© kun je rekenen.",
 			"tags": [
 				"Nuxt",
 				"SCSS",
 				"Wordpress"
 			],
 			"images": [
-				"Ride-Out-1.jpg"
-			] 
+				{
+					"name": "joel-muniz-B8qIaoeKcfU-unsplash.jpg",
+					"alt": "Dit is een test",
+					"src": "jan"
+				}
+			]
 		},
 		{
-			"name": "Go Your Own Way",
-			"pay-off": "Lorem ipsum dolor sit amet.",
+			"name": "Go Your Own Way.",
+			"pay-off": "Vind snel de reis die het beste bij je past.",
 			"tags": [
 				"PHP",
 				"SCSS",
 				"Wordpress"
 			],
 			"images": [
-				"Ride-Out-1.jpg"
-			] 
+				{
+					"name": "angela-bailey-GfUk_pFtjz0-unsplash.jpg",
+					"alt": "Dit is een test",
+					"src": "gyow"
+				}
+			]
 		}
 	]
 }
