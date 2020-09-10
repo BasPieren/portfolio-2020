@@ -1,5 +1,5 @@
 <template>
-	<section class="overlay">
+	<section :class="['overlay', { small: overlayScrollPosition }]">
 		<div class="overlay__left">
 			<ul class="language__list">
 				<li class="language__item">
@@ -43,7 +43,28 @@
 
 <script>
 export default {
-	name: "Overlay"
+	name: "Overlay",
+	data() {
+		return {
+			overlayScrollPosition: false
+		}
+	},
+	mounted() {
+		window.addEventListener('scroll', this.checkScrollPosition)
+	},
+	methods: {
+		checkScrollPosition() {
+			const getWindowScrollPosition = window.scrollY
+			console.log(getWindowScrollPosition)
+
+			if (getWindowScrollPosition >= 400) {
+				this.overlayScrollPosition = true
+			} else {
+				this.overlayScrollPosition = false
+			}
+
+		}
+	}
 }
 </script>
 
@@ -53,8 +74,31 @@ export default {
 	display: flex;
 	width: 100vw;
 	height: 100%;
-	pointer-events:none;
-	z-index: 3;
+	pointer-events: none;
+	z-index: 4;
+	&.small {
+		.overlay__left {
+			padding: 0;
+		}
+		.overlay__right {
+			padding: 0;
+		}
+		.language__list {
+			padding: 1rem;
+			&::after {
+				clip-path: inset(0 0 0 0);
+			}
+		}
+		.language__button {
+			color: var(--light);
+		}
+		.social__list {
+			padding: 1rem;
+			&::after {
+				clip-path: inset(0 0 0 0);
+			}
+		}
+	}
 	&__left {
 		display: flex;
 		flex-direction: column;
@@ -63,6 +107,7 @@ export default {
 		padding: 0 0 0 8vw;
 		width: 50vw;
 		height: 100%;
+		transition: 0.4s;
 	}
 	&__right {
 		display: flex;
@@ -72,6 +117,7 @@ export default {
 		padding: 0 8vw 0 0;
 		width: 50vw;
 		height: 100%;
+		transition: 0.4s;
 	}
 }
 
@@ -81,6 +127,7 @@ export default {
 		flex-direction: column;
 		justify-content: space-between;
 		height: 10%;
+		transition: 0.4s;
 	}
 	&__button {
 		background-color: rgba(0,0,0,0);
@@ -96,10 +143,24 @@ export default {
 
 .social {
 	&__list {
+		position: relative;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
 		height: 25%;
+		transition: 0.4s;
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 100%;
+			height: 100%;
+			background-color: var(--folio-purple);
+			clip-path: inset(0 100% 0 0);
+			transition: 0.4s;
+			z-index: -1;
+		}
 	}
 	&__link {
 		color: var(--light);

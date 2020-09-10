@@ -68,6 +68,20 @@ export default {
 		position: absolute;
 		bottom: 3vw;
 		left: 4vw;
+		animation: arrowBounce 1s infinite ease;
+		transition: 0.4s;
+	}
+}
+
+@keyframes arrowBounce {
+	0% {
+		bottom: 4vw;
+	}
+	50% {
+		bottom: 4.5vw;
+	}
+	100% {
+		bottom: 4vw;
 	}
 }
 </style>
