@@ -4,9 +4,9 @@
 		<div class="work__container">
 			<div v-for="project in allWork" :key="project" class="work__item">
 				<img :src="require(`../../static/images/${project.images[0].src}/${project.images[0].name}`).default" :alt="project.images[0].alt" class="work__image">
-				<h4 class="work__title">
+				<h3 class="work__title">
 					{{ project.name }}
-				</h4>
+				</h3>
 				<div class="work__content">
 					<p class="work__copy">
 						{{ project['pay-off'] }}
@@ -21,7 +21,6 @@
 		</div>
 	</section>
 </template>
-
 
 <script>
 import json from '../../static/json/work.json'

@@ -53,6 +53,9 @@ export default {
 				transform: scaleX(1);
 			}
 		}
+		&:focus{
+			outline: none;
+		}
 		&::after {
 			content: '';
 			position: absolute;
