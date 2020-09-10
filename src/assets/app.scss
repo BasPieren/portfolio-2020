@@ -48,6 +48,9 @@ p {
 		color: var(--folio-purple);
 		font-weight: 700;
 	}
+	&.white {
+		color: var(--light);
+	}
 	&.small {
 		font-size: 1rem;
 		@media screen and (max-width: 1440px) {

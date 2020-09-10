@@ -35,7 +35,7 @@
 					MBO Niveau 4 - Interactief Vormgeven
 				</p>
 
-				<p class="about__year small"></p><p>
+				<p class="about__year small">
 					2009-2012
 				</p>
 				<p class="about__school bold">
@@ -67,7 +67,7 @@
 					Stagiair Web design en Web Development
 				</p>
 
-				<p class="about__year small"></p><p>
+				<p class="about__year small">
 					aug. 2015 - jul. 2016
 				</p>
 				<p class="about__school bold">
@@ -77,7 +77,7 @@
 					Stagiair Front-end Developer & Front-end Developer
 				</p>
 
-				<p class="about__year small"></p><p>
+				<p class="about__year small">
 					feb. 2015 - jun. 2015
 				</p>
 				<p class="about__school bold">
