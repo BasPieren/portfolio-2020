@@ -53,6 +53,7 @@ export default {
 	display: flex;
 	width: 100vw;
 	height: 100%;
+	pointer-events:none;
 	z-index: 3;
 	&__left {
 		display: flex;
@@ -84,6 +85,7 @@ export default {
 	&__button {
 		background-color: rgba(0,0,0,0);
 		border: none;
+		pointer-events: all;
 		transition: 0.4s;
 		&:hover {
 			transform: scale(1.2);
@@ -102,6 +104,7 @@ export default {
 	&__link {
 		color: var(--light);
 		text-decoration: none;
+		pointer-events: all;
 	}
 	&__icon {
 		transition: 0.4s;
