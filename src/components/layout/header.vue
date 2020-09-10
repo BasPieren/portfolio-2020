@@ -1,6 +1,6 @@
 <template>
 	<header class="header">
-		<h3>Bas Pieren &#x1f468;&#x1F3FB;&#x200d;&#x1f4bb;‍</h3>
+		<h3>Hallo. &#x1f468;&#x1F3FB;&#x200d;&#x1f4bb;‍</h3>
 		<ul class="header__nav">
 			<li class="header__item">
 				<a class="header__link" href="#work">

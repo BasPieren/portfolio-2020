@@ -5,6 +5,7 @@
 				Heb jij een Front-end developer nodig? Stuur een berichtje, dan kunnen we een keer koffie drinken. &#x2615;
 			</p>
 			<a class="footer__email" href="mailto:bas.pieren@quicknet.nl">
+				<svgicon name="email-24px"></svgicon>
 			</a>
 			<div class="footer__disclaimer">
 				<p class="white small">

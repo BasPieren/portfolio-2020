@@ -2,7 +2,7 @@
 	<section class="hero">
 		<div class="hero__left">
 			<h2>
-				Hallo.
+				Bas Pieren.
 			</h2>
 			<p>
 				Hi! Ik ben <span>Bas</span>, Front-end Developer, recent afgestudeerd <span>Communication and Multimedia Design</span>
@@ -11,8 +11,9 @@
 		</div>
 		<div class="hero__right">
 			<h2>
-				Hallo.
+				Bas Pieren.
 			</h2>
+			<svgicon name="long-arrow-alt-down-solid" class="hero__icon"></svgicon>
 		</div>
 	</section>
 </template>
@@ -49,6 +50,7 @@ export default {
 		position: relative;
 		width: 50vw;
 		height: 100%;
+		color: var(--light);
 		background-color: var(--folio-purple);
 		overflow: hidden;
 		h2 {
@@ -61,6 +63,11 @@ export default {
 			-webkit-text-stroke: 0.25rem var(--light);
 			z-index: 3;
 		}
+	}
+	&__icon {
+		position: absolute;
+		bottom: 3vw;
+		left: 4vw;
 	}
 }
 </style>
