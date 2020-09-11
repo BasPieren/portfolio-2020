@@ -122,6 +122,8 @@ export default {
 		margin-top: 0.25rem;
 	}
 	&__image {
+		position: sticky;
+		top: 4vw;
 		width: 33vw;
 		height: auto;
 	}

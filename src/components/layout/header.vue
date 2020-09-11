@@ -4,19 +4,19 @@
 		<nav class="header__nav">
 			<ul class="header__list">
 				<li class="header__item">
-					<a class="header__link" href="#work">
+					<button v-scroll-to="'#work'" class="header__button">
 						Werk.
-					</a>
+					</button>
 				</li>
 				<li class="header__item">
-					<a class="header__link" href="#about">
+					<button v-scroll-to="'#about'" class="header__button">
 						Over.
-					</a>
+					</button>
 				</li>
 				<li class="header__item">
-					<a class="header__link" href="#footer">
+					<button v-scroll-to="'#footer'" class="header__button">
 						Contact.
-					</a>
+					</button>
 				</li>
 			</ul>
 		</nav>
@@ -46,12 +46,15 @@ export default {
 		display: flex;
 		justify-content: space-between;
 	}
-	&__link {
+	&__button {
 		position: relative;
 		font-size: 1.25rem;
 		font-weight: 500;
 		color: var(--light);
 		text-decoration: none;
+		background-color: rgba(0,0,0,0);
+		border: none;
+		cursor: pointer;
 		&:hover{
 			&::after {
 				transform: scaleX(1);
