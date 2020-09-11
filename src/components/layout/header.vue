@@ -1,23 +1,25 @@
 <template>
 	<header class="header">
 		<h3>Hallo. &#x1f468;&#x1F3FB;&#x200d;&#x1f4bb;‍</h3>
-		<ul class="header__nav">
-			<li class="header__item">
-				<a class="header__link" href="#work">
-					Werk.
-				</a>
-			</li>
-			<li class="header__item">
-				<a class="header__link" href="#about">
-					Over.
-				</a>
-			</li>
-			<li class="header__item">
-				<a class="header__link" href="#footer">
-					Contact.
-				</a>
-			</li>
-		</ul>
+		<nav class="header__nav">
+			<ul class="header__list">
+				<li class="header__item">
+					<a class="header__link" href="#work">
+						Werk.
+					</a>
+				</li>
+				<li class="header__item">
+					<a class="header__link" href="#about">
+						Over.
+					</a>
+				</li>
+				<li class="header__item">
+					<a class="header__link" href="#footer">
+						Contact.
+					</a>
+				</li>
+			</ul>
+		</nav>
 	</header>
 </template>
 
@@ -38,9 +40,11 @@ export default {
 	padding: 3.75rem 8vw;
 	z-index: 4;
 	&__nav {
+		width: 25%
+	}
+	&__list {
 		display: flex;
 		justify-content: space-between;
-		width: 25%;
 	}
 	&__link {
 		position: relative;
