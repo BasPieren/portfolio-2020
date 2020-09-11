@@ -8,12 +8,12 @@
 				</a>
 			</li>
 			<li class="header__item">
-				<a class="header__link" href="#">
+				<a class="header__link" href="#about">
 					Over.
 				</a>
 			</li>
 			<li class="header__item">
-				<a class="header__link" href="#">
+				<a class="header__link" href="#footer">
 					Contact.
 				</a>
 			</li>

@@ -1,5 +1,5 @@
 <template>
-	<footer class="footer">
+	<footer id="footer" class="footer">
 		<div class="footer__container">
 			<p class="white">
 				Heb jij een Front-end developer nodig? Stuur een berichtje, dan kunnen we een keer koffie drinken. &#x2615;
