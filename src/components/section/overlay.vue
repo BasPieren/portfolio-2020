@@ -85,6 +85,7 @@ export default {
 		}
 		.language__list {
 			padding: 1rem;
+			height: 12%;
 			&::after {
 				clip-path: inset(0 0 0 0);
 			}
@@ -123,11 +124,25 @@ export default {
 
 .language {
 	&__list {
+		position: relative;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
 		height: 10%;
 		transition: 0.4s;
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 100%;
+			height: 100%;
+			background-color: var(--folio-purple);
+			clip-path: inset(0 0 0 100%);
+			box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.2);
+			transition: 0.4s;
+			z-index: -1;
+		}
 	}
 	&__button {
 		background-color: rgba(0,0,0,0);
