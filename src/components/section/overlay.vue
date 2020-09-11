@@ -55,7 +55,6 @@ export default {
 	methods: {
 		checkScrollPosition() {
 			const getWindowScrollPosition = window.scrollY
-			console.log(getWindowScrollPosition)
 
 			if (getWindowScrollPosition >= 400) {
 				this.overlayScrollPosition = true
