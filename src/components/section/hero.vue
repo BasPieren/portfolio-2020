@@ -2,16 +2,13 @@
 	<section class="hero">
 		<div class="hero__left">
 			<h2>
-				{{ title }}
+				{{ heroTitle }}
 			</h2>
-			<p>
-				Hi! Ik ben <span>Bas</span>, Front-end Developer, recent afgestudeerd <span>Communication and Multimedia Design</span>
-				aan de HvA en opzoek naar een nieuwe uitdaging.
-			</p>
+			<div class="p" v-html="heroCopy"></div>
 		</div>
 		<div class="hero__right">
 			<h2>
-				{{ title }}
+				{{ heroTitle }}
 			</h2>
 			<svgicon name="long-arrow-alt-down-solid" class="hero__icon"></svgicon>
 		</div>
@@ -21,11 +18,9 @@
 <script>
 export default {
 	name: "Hero",
-	props: {
-		title: {
-			default: '',
-			type: String
-		}
+	computed: {
+		heroTitle() { return this.$store.state.hero.title },
+		heroCopy() { return this.$store.state.hero.copy }
 	}
 }
 </script>
