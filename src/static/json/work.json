@@ -14,7 +14,8 @@
 					"alt": "Dit is een test",
 					"src": "rideout"
 				}
-			]
+			],
+			"url": "rideout"
 		},
 		{
 			"name": "JAN©",
@@ -30,7 +31,8 @@
 					"alt": "Dit is een test",
 					"src": "jan"
 				}
-			]
+			],
+			"url": "jan"
 		},
 		{
 			"name": "Go Your Own Way.",
@@ -46,7 +48,8 @@
 					"alt": "Dit is een test",
 					"src": "gyow"
 				}
-			]
+			],
+			"url": "gyow"
 		}
 	]
 }

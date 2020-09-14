@@ -3,6 +3,7 @@
 		<h3>Werk.</h3>
 		<div class="work__container">
 			<div v-for="project in allWork" :key="project.name" class="work__item">
+				<a class="work__link" :href="project.url"></a>
 				<img :src="require(`../../static/images/${project.images[0].src}/${project.images[0].name}`).default" :alt="project.images[0].alt" class="work__image">
 				<h3 class="work__title">
 					{{ project.name }}
@@ -114,6 +115,12 @@ export default {
 		clip-path: inset(100% 0 0 0);
 		transition: 0.4s;
 		z-index: 2;
+	}
+	&__link {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		z-index: 3;
 	}
 	&__copy {
 		color: var(--light);
