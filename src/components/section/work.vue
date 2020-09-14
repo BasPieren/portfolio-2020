@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import json from '../../static/json/work.json'
+import json from '@/static/json/work.json'
 
 export default {
 	name: "Work",
