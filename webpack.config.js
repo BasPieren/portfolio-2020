@@ -1,5 +1,6 @@
 'use strict'
 
+const path = require('path')
 const webpack = require('webpack')
 const { VueLoaderPlugin } = require('vue-loader')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
@@ -10,6 +11,15 @@ module.exports = {
 		hot: true,
 		watchOptions: {
 			poll: true
+		}
+	},
+	resolve: {
+		alias: {
+			'@': path.resolve(__dirname, 'src/'),
+			Components: path.resolve(__dirname, 'src/components/'),
+			Assets: path.resolve(__dirname, 'src/assets/'),
+			Static: path.resolve(__dirname, 'src/static/'),
+			Router: path.resolve(__dirname, 'src/router/'),
 		}
 	},
 	module: {

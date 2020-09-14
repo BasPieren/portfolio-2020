@@ -10,12 +10,12 @@
 </template>
 
 <script>
-import LayoutHeader from './components/layout/header.vue'
-import Overlay from './components/section/overlay.vue'
-import Hero from './components/section/hero.vue'
-import Work from './components/section/work.vue'
-import About from './components/section/about.vue'
-import LayoutFooter from './components/layout/footer.vue'
+import LayoutHeader from 'Components/layout/header.vue'
+import Overlay from 'Components/section/overlay.vue'
+import Hero from 'Components/section/hero.vue'
+import Work from 'Components/section/work.vue'
+import About from 'Components/section/about.vue'
+import LayoutFooter from 'Components/layout/footer.vue'
 
 export default {
 	name: "App",

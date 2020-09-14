@@ -3,7 +3,7 @@
 		<h3>Werk.</h3>
 		<div class="work__container">
 			<div v-for="project in allWork" :key="project.name" class="work__item">
-				<a class="work__link" :href="project.url"></a>
+				<router-link :to="project.url" class="work__link"></router-link>
 				<img :src="require(`../../static/images/${project.images[0].src}/${project.images[0].name}`).default" :alt="project.images[0].alt" class="work__image">
 				<h3 class="work__title">
 					{{ project.name }}

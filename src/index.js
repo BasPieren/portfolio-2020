@@ -1,17 +1,22 @@
+// Import
 import Vue from 'vue'
 import App from './App.vue'
-import SvgIcon from 'vue-svgicon'
+import VueSvgIcon from 'vue-svgicon'
 import VueScrollTo from 'vue-scrollto'
-import '../src/assets/app.scss'
-import './components/icons/index.js'
+import 'Assets/app.scss'
+import 'Components/icons/index.js'
+import router from 'Router/index.js'
 
 Vue.config.productionTip = false
 
-Vue.use(SvgIcon, {
+// Vue Use
+Vue.use(VueSvgIcon, {
 	tagName: 'svgicon'
 })
 Vue.use(VueScrollTo)
 
+// Vue Instance
 new Vue({
-	render: (h) => h(App)
+	router,
+	render: (h) => h(App),
 }).$mount('#app')
