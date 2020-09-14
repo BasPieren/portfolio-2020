@@ -3,7 +3,8 @@ import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
 
-const home = Vue.component('home', require('@/App.vue'))
+import home from '@/modules/home.vue'
+import project from '@/modules/project.vue'
 
 const router = new VueRouter({
 	mode: 'history',
@@ -15,17 +16,17 @@ const router = new VueRouter({
 		{
 			path: '/rideout',
 			name: 'rideout',
-			component: home
+			component: project
 		},
 		{
 			path: '/jan',
 			name: 'jan',
-			component: home
+			component: project
 		},
 		{
 			path: '/gyow',
 			name: 'gyow',
-			component: home
+			component: project
 		}
 	]
 })

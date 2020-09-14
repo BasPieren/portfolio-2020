@@ -1,4 +1,3 @@
-// Import
 import Vue from 'vue'
 import App from '@/App.vue'
 import VueSvgIcon from 'vue-svgicon'
