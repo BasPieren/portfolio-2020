@@ -3,8 +3,8 @@ import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
 
-import home from '@/modules/home.vue'
-import project from '@/modules/project.vue'
+import home from '@/components/modules/home.vue'
+import project from '@/components/modules/project.vue'
 
 const router = new VueRouter({
 	mode: 'history',

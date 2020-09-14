@@ -1,8 +1,8 @@
 <template>
-	<div id="app">
+	<div class="layout">
 		<LayoutHeader />
 		<Overlay />
-		<Hero />
+		<Hero :title="'Bas Pieren'" />
 		<Work />
 		<About />
 		<LayoutFooter />
