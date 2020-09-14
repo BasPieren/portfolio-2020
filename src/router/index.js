@@ -3,14 +3,30 @@ import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
 
-// Components
-var home = Vue.component('home', require('@/App.vue'))
+const home = Vue.component('home', require('@/App.vue'))
 
-// Router
 const router = new VueRouter({
 	mode: 'history',
 	routes: [
-		{ path: '/', component: home }
+		{
+			path: '/',
+			component: home
+		},
+		{
+			path: '/rideout',
+			name: 'rideout',
+			component: home
+		},
+		{
+			path: '/jan',
+			name: 'jan',
+			component: home
+		},
+		{
+			path: '/gyow',
+			name: 'gyow',
+			component: home
+		}
 	]
 })
 
