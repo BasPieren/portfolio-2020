@@ -2,7 +2,7 @@
 	<section id="work" class="work">
 		<h3>Werk.</h3>
 		<div class="work__container">
-			<div v-for="project in allWork" :key="project" class="work__item">
+			<div v-for="project in allWork" :key="project.name" class="work__item">
 				<img :src="require(`../../static/images/${project.images[0].src}/${project.images[0].name}`).default" :alt="project.images[0].alt" class="work__image">
 				<h3 class="work__title">
 					{{ project.name }}

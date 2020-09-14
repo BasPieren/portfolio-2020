@@ -1,19 +1,6 @@
 <template>
 	<section :class="['overlay', { small: overlayScrollPosition }]">
-		<div class="overlay__left">
-			<ul class="language__list">
-				<li class="language__item">
-					<button class="language__button">
-						NL.
-					</button>
-				</li>
-				<li class="language__item">
-					<button class="language__button">
-						EN.
-					</button>
-				</li>
-			</ul>
-		</div>
+		<div class="overlay__left"></div>
 		<div class="overlay__right">
 			<ul class="social__list">
 				<li class="scoail__item">
@@ -56,7 +43,7 @@ export default {
 		checkScrollPosition() {
 			const getWindowScrollPosition = window.scrollY
 
-			if (getWindowScrollPosition >= 400) {
+			if (getWindowScrollPosition >= 100) {
 				this.overlayScrollPosition = true
 			} else {
 				this.overlayScrollPosition = false
@@ -118,40 +105,6 @@ export default {
 		width: 50vw;
 		height: 100%;
 		transition: 0.4s;
-	}
-}
-
-.language {
-	&__list {
-		position: relative;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		height: 10%;
-		transition: 0.4s;
-		&::after {
-			content: '';
-			position: absolute;
-			top: 0;
-			right: 0;
-			width: 100%;
-			height: 100%;
-			background-color: var(--folio-purple);
-			clip-path: inset(0 0 0 100%);
-			box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.2);
-			transition: 0.4s;
-			z-index: -1;
-		}
-	}
-	&__button {
-		background-color: rgba(0,0,0,0);
-		border: none;
-		pointer-events: all;
-		transition: 0.4s;
-		&:hover {
-			transform: scale(1.2);
-			cursor: pointer;
-		}
 	}
 }
 
