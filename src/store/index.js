@@ -1,21 +1,14 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import heroState from './modules/hero'
+import headerState from './modules/header'
 
 Vue.use(Vuex)
 
 const store = new Vuex.Store({
-	state: {
-		hero: {
-			title: 'Bas Pieren',
-			copy: `Hi! Ik ben <span>Bas</span>, Front-end Developer, recent afgestudeerd <span>Communication and Multimedia Design</span>
-			aan de HvA en opzoek naar een nieuwe uitdaging.`
-		}
-	},
-	mutations: {
-		updateHero(state, payload) {
-			state.hero.title = payload.name
-			state.hero.copy = payload['pay-off']
-		}
+	modules: {
+		hero: heroState,
+		header: headerState
 	}
 })
 

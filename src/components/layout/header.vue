@@ -1,6 +1,8 @@
 <template>
 	<header class="header">
-		<h3>Hallo. &#x1f468;&#x1F3FB;&#x200d;&#x1f4bb;‍</h3>
+		<router-link :to="'/'" class="header__link" @click.native="resetHeroState">
+			<div class="h3" v-html="headerTitle"></div>
+		</router-link>
 		<nav class="header__nav">
 			<ul class="header__list">
 				<li class="header__item">
@@ -25,7 +27,15 @@
 
 <script>
 export default {
-	name: "Header"
+	name: "Header",
+	computed: {
+		headerTitle() { return this.$store.state.header.title },
+	},
+	methods: {
+		resetHeroState() {
+			this.$store.dispatch('resetHeroState')
+		}
+	}
 }
 </script>
 
@@ -39,6 +49,9 @@ export default {
 	left: 0;
 	padding: 3.75rem 8vw;
 	z-index: 4;
+	&__link {
+		text-decoration: none;
+	}
 	&__nav {
 		width: 25%
 	}
