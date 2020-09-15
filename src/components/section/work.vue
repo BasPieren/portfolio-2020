@@ -3,7 +3,7 @@
 		<h3>Werk.</h3>
 		<div class="work__container">
 			<div v-for="project in allWork" :key="project.name" class="work__item">
-				<router-link :to="project.url" class="work__link" @click.native="updateHeader(); updateHeroStore(project);"></router-link>
+				<router-link :to="project.url" class="work__link" @click.native="updateHeader(); updateHeroStore(project); updateActiveProject(project);"></router-link>
 				<img :src="require(`../../static/images/${project.images[0].src}/${project.images[0].name}`).default" :alt="project.images[0].alt" class="work__image">
 				<h3 class="work__title">
 					{{ project.name }}
@@ -50,6 +50,9 @@ export default {
 		},
 		updateHeader() {
 			this.$store.commit('updateHeader')
+		},
+		updateActiveProject(payload) {
+			this.$store.commit('updateActiveProject', payload)
 		}
 	}
 }

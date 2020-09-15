@@ -14,8 +14,27 @@
 			"images": [
 				{
 					"name": "Ride-Out-1.jpg",
+					"alt": "Ride Out Amsterdam",
+					"src": "rideout",
+					"type": "featured"
+				},
+				{
+					"name": "Screenshot 2020-09-15 at 14.17.15.png",
 					"alt": "Dit is een test",
-					"src": "rideout"
+					"src": "rideout",
+					"type": "website"
+				},
+				{
+					"name": "Screenshot 2020-09-15 at 14.17.32.png",
+					"alt": "Dit is een test",
+					"src": "rideout",
+					"type": "website"
+				},
+				{
+					"name": "Screenshot 2020-09-15 at 14.17.56.png",
+					"alt": "Dit is een test",
+					"src": "rideout",
+					"type": "website"
 				}
 			],
 			"url": "rideout"
@@ -35,7 +54,26 @@
 				{
 					"name": "joel-muniz-B8qIaoeKcfU-unsplash.jpg",
 					"alt": "Dit is een test",
-					"src": "jan"
+					"src": "jan",
+					"type": "featured"
+				},
+				{
+					"name": "joel-muniz-B8qIaoeKcfU-unsplash.jpg",
+					"alt": "Dit is een test",
+					"src": "jan",
+					"type": "website"
+				},
+				{
+					"name": "joel-muniz-B8qIaoeKcfU-unsplash.jpg",
+					"alt": "Dit is een test",
+					"src": "jan",
+					"type": "website"
+				},
+				{
+					"name": "joel-muniz-B8qIaoeKcfU-unsplash.jpg",
+					"alt": "Dit is een test",
+					"src": "jan",
+					"type": "website"
 				}
 			],
 			"url": "jan"
