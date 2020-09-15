@@ -3,6 +3,9 @@
 		{
 			"name": "Ride Out.",
 			"pay-off": "Here to connect and inspire.",
+			"client": "Ride Out Amsterdam",
+			"role": "Development",
+			"agency": "Matise",
 			"tags": [
 				"Nuxt",
 				"SCSS",
@@ -20,6 +23,9 @@
 		{
 			"name": "JAN©",
 			"pay-off": "Op JAN© kun je rekenen.",
+			"client": "JAN©",
+			"role": "Development",
+			"agency": "Matise",
 			"tags": [
 				"Nuxt",
 				"SCSS",
@@ -37,6 +43,9 @@
 		{
 			"name": "Go Your Own Way.",
 			"pay-off": "Vind snel de reis die het beste bij je past.",
+			"client": "Go Your Own Way",
+			"role": "Development",
+			"agency": "Matise",
 			"tags": [
 				"PHP",
 				"SCSS",

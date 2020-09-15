@@ -1,16 +1,16 @@
 <template>
 	<div class="layout">
-		<Hero />
+		<ProjectDetail />
 	</div>
 </template>
 
 <script>
-import Hero from '@/components/section/hero.vue'
+import ProjectDetail from '@/components/section/project-detail.vue'
 
 export default {
 	name: "Project",
 	components: {
-		Hero
+		ProjectDetail
 	}
 }
 </script>
