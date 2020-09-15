@@ -28,7 +28,10 @@ const router = new VueRouter({
 			name: 'gyow',
 			component: project
 		}
-	]
+	],
+	scrollBehavior() {
+		return { x: 0, y: 0 }
+	}
 })
 
 export default router
