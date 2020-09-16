@@ -1,6 +1,6 @@
 const getDefaultState = () => {
 	return {
-		title: 'Hallo. &#x1f468;&#x1F3FB;&#x200d;&#x1f4bb;‍',
+		heading: 'Hallo. &#x1f468;&#x1F3FB;&#x200d;&#x1f4bb;‍',
 	}
 }
 const state = getDefaultState()
@@ -14,7 +14,7 @@ const mutations = {
 		Object.assign(state, getDefaultState())
 	},
 	updateHeader(state) {
-		state.title = '&#x1F448;&#x1F3FB Terug.'
+		state.heading = '&#x1F448;&#x1F3FB Terug.'
 	}
 }
 export default {

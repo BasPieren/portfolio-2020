@@ -9,22 +9,21 @@
 
 body {
 	font-family: Roboto, sans-serif;
+	color: var(--dark);
 }
 
 h2 {
 	font-size: 10vw;
 	font-weight: 700;
-	color: var(--dark);
 	@media screen and (max-width: 750px) {
 		font-size: 3rem;
 	}
 }
 
 h3,
-.h3 {
+.heading--h3 {
 	font-size: 3vw;
 	font-weight: 700;
-	color: var(--dark);
 	@media screen and (max-width: 1440px) {
 		font-size: 2rem;
 	}
@@ -33,7 +32,6 @@ h3,
 h4 {
 	font-size: 2.5vw;
 	font-weight: 700;
-	color: var(--dark);
 	@media screen and (max-width: 750px) {
 		font-size: 1.5rem;
 	}
@@ -46,30 +44,12 @@ p,
 	@media screen and (max-width: 1440px) {
 		font-size: 1rem;
 	}
-	span {
-		color: var(--folio-purple);
-		font-weight: 700;
-	}
-	&.white {
-		color: var(--light);
-	}
 	&.small {
 		font-size: 1rem;
 		@media screen and (max-width: 1440px) {
 			font-size: 0.8rem;
 		}
 	}
-	&.bold {
-		font-weight: 700;
-	}
-	&.italic {
-		font-style: italic;
-	}
-}
-
-ul {
-	padding: 0;
-	list-style: none;
 }
 
 h3,
@@ -77,6 +57,36 @@ h4,
 p {
 	& + p {
 		margin-top: 1rem;;
+	}
+}
+
+.font-weight {
+	&--regular {
+		font-weight: 400;
+	}
+	&--medium {
+		font-weight: 500;
+	}
+	&--bold {
+		font-weight: 700;
+	}
+}
+
+.font-style {
+	&--italic {
+		font-style: italic;
+	}
+}
+
+.color {
+	&--light {
+		color: var(--light);
+	}
+	&--dark {
+		color: var(--dark);
+	}
+	&--purple {
+		color: var(--folio-purple);
 	}
 }
 

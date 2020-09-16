@@ -1,22 +1,22 @@
 <template>
 	<header class="header">
 		<router-link :to="'/'" class="header__link" @click.native="resetHeroState">
-			<div class="h3" v-html="headerTitle"></div>
+			<div class="header__heading heading--h3 color--dark" v-html="getHeaderHeading"></div>
 		</router-link>
 		<nav class="header__nav">
 			<ul class="header__list">
 				<li class="header__item">
-					<button v-scroll-to="'#work'" class="header__button">
+					<button v-scroll-to="'#work'" class="header__button font-weight--medium color--light">
 						Werk.
 					</button>
 				</li>
 				<li class="header__item">
-					<button v-scroll-to="'#about'" class="header__button">
+					<button v-scroll-to="'#about'" class="header__button font-weight--medium color--light">
 						Over.
 					</button>
 				</li>
 				<li class="header__item">
-					<button v-scroll-to="'#footer'" class="header__button">
+					<button v-scroll-to="'#footer'" class="header__button font-weight--medium color--light">
 						Contact.
 					</button>
 				</li>
@@ -29,7 +29,9 @@
 export default {
 	name: "Header",
 	computed: {
-		headerTitle() { return this.$store.state.header.title },
+		getHeaderHeading() {
+			return this.$store.state.header.heading
+		}
 	},
 	methods: {
 		resetHeroState() {
@@ -48,7 +50,7 @@ export default {
 	right: 0;
 	left: 0;
 	padding: 3.75rem 8vw;
-	z-index: 4;
+	z-index: 1;
 	@media screen and (max-width: 750px) {
 		padding: 2rem;
 	}
@@ -67,14 +69,13 @@ export default {
 	&__list {
 		display: flex;
 		justify-content: space-between;
+		list-style: none;
 	}
 	&__button {
 		position: relative;
 		font-size: 1.25rem;
-		font-weight: 500;
-		color: var(--light);
 		text-decoration: none;
-		background-color: rgba(0,0,0,0);
+		background-color: rgba(0, 0, 0, 0);
 		border: none;
 		cursor: pointer;
 		&:hover{
