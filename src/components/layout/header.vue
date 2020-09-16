@@ -49,11 +49,20 @@ export default {
 	left: 0;
 	padding: 3.75rem 8vw;
 	z-index: 4;
+	@media screen and (max-width: 750px) {
+		padding: 2rem;
+	}
 	&__link {
 		text-decoration: none;
 	}
 	&__nav {
-		width: 25%
+		width: 25%;
+		@media screen and (max-width: 1024px) {
+			width: 35%;
+		}
+		@media screen and (max-width: 750px) {
+			display: none;
+		}
 	}
 	&__list {
 		display: flex;

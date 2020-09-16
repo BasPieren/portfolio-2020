@@ -1,13 +1,13 @@
 <template>
 	<section class="hero">
 		<div class="hero__left">
-			<h2>
+			<h2 class="hero__heading">
 				{{ heroTitle }}
 			</h2>
-			<div class="p" v-html="heroCopy"></div>
+			<div class="hero__copy p" v-html="heroCopy"></div>
 		</div>
 		<div class="hero__right">
-			<h2>
+			<h2 class="hero__heading">
 				{{ heroTitle }}
 			</h2>
 			<svgicon name="long-arrow-alt-down-solid" class="hero__icon"></svgicon>
@@ -29,6 +29,9 @@ export default {
 .hero {
 	display: flex;
 	height: 100vh;
+	@media screen and (max-width: 750px) {
+		height: 30vh;
+	}
 	&__left {
 		position: relative;
 		display: flex;
@@ -38,13 +41,20 @@ export default {
 		width: 50vw;
 		height: 100%;
 		overflow: hidden;
-		h2 {
-			position: absolute;
-			top: 50%;
+		@media screen and (max-width: 750px) {
+			padding: 2rem;
+			width: 100%;
+		}
+		.hero__heading {
 			right: 0;
-			white-space: nowrap;
 			transform: translate(50%, -50%);
 			z-index: 4;
+			@media screen and (max-width: 750px) {
+				position: unset;
+				top: unset;
+				right: unset;
+				transform: unset;
+			}
 		}
 	}
 	&__right {
@@ -54,15 +64,25 @@ export default {
 		color: var(--light);
 		background-color: var(--folio-purple);
 		overflow: hidden;
-		h2 {
-			position: absolute;
-			top: 50%;
+		@media screen and (max-width: 750px) {
+			display: none;
+		}
+		.hero__heading {
 			left: 0;
 			transform: translate(-50%, -50%);
 			color: transparent;
-			white-space: nowrap;
 			-webkit-text-stroke: 0.25rem var(--light);
 			z-index: 3;
+		}
+	}
+	&__heading {
+		position: absolute;
+		top: 50%;
+		white-space: nowrap;
+	}
+	&__copy {
+		@media screen and (max-width: 750px) {
+			margin-top: 1rem;
 		}
 	}
 	&__icon {
