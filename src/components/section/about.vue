@@ -129,6 +129,9 @@ export default {
 		top: 4vw;
 		width: 100%;
 		height: auto;
+		@media screen and (max-width: 750px) {
+			top: 2rem;
+		}
 	}
 }
 </style>

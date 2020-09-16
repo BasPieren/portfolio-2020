@@ -51,9 +51,15 @@ export default {
 	grid-template-columns: 1fr 1fr;
 	grid-gap: 4vw;
 	padding: 10rem 12.5vw 0 12.5vw;
+	@media screen and (max-width: 750px) {
+		grid-template-columns: 1fr;
+		padding: 5rem 2rem 0 2rem;
+	}
 	&__container {
-		grid-column-start: 2;
-		grid-column-end: 3;
+		grid-column: 2 / 3;
+		@media screen and (max-width: 750px) {
+			grid-column: unset;
+		}
 	}
 	&__content {
 		margin: 0 0 2vw 0;
@@ -73,6 +79,9 @@ export default {
 		width: 100%;
 		&:last-of-type {
 			margin: 0;
+		}
+		@media screen and (max-width: 750px) {
+			grid-column: unset;
 		}
 	}
 }

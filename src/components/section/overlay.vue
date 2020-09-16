@@ -43,10 +43,12 @@ export default {
 		checkScrollPosition() {
 			const getWindowScrollPosition = window.scrollY
 
-			if (getWindowScrollPosition >= 100) {
-				this.overlayScrollPosition = true
-			} else {
-				this.overlayScrollPosition = false
+			if (window.outerWidth > '750') {
+				if (getWindowScrollPosition >= 100) {
+					this.overlayScrollPosition = true
+				} else {
+					this.overlayScrollPosition = false
+				}
 			}
 
 		}
@@ -105,6 +107,9 @@ export default {
 		width: 50vw;
 		height: 100%;
 		transition: 0.4s;
+		@media screen and (max-width: 750px) {
+			padding: 0;
+		}
 	}
 }
 
@@ -116,6 +121,11 @@ export default {
 		justify-content: space-between;
 		height: 25%;
 		transition: 0.4s;
+		@media screen and (max-width: 750px) {
+			padding: 1rem;
+			height: 20%;
+			background-color: var(--folio-purple);
+		}
 		&::after {
 			content: '';
 			position: absolute;

@@ -30,7 +30,7 @@ export default {
 	display: flex;
 	height: 100vh;
 	@media screen and (max-width: 750px) {
-		height: 30vh;
+		height: 25vh;
 	}
 	&__left {
 		position: relative;
