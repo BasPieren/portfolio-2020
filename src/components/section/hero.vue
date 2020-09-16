@@ -42,7 +42,7 @@ export default {
 		height: 100%;
 		overflow: hidden;
 		@media screen and (max-width: 750px) {
-			padding: 2rem;
+			padding: 0 2rem;
 			width: 100%;
 		}
 		.hero__heading {

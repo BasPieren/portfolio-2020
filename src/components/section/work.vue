@@ -84,6 +84,7 @@ export default {
 		@media screen and (max-width: 750px) {
 			grid-template-columns: 1fr;
 			grid-gap: 1rem;
+			padding: 2rem 0 0 0;
 		}
 	}
 	&__item {

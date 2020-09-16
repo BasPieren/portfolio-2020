@@ -106,6 +106,9 @@ export default {
 	grid-template-columns: 1fr 1fr;
 	grid-gap: 4vw;
 	padding: 10rem 12.5vw 0 12.5vw;
+	@media screen and (max-width: 750px) {
+		padding: 5rem 2rem 0 2rem;
+	}
 	&__content {
 		margin: 0 0 4vw 0;
 		&:last-of-type {
@@ -124,7 +127,7 @@ export default {
 	&__image {
 		position: sticky;
 		top: 4vw;
-		width: 33vw;
+		width: 100%;
 		height: auto;
 	}
 }

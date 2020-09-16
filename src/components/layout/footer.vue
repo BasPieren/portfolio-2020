@@ -35,6 +35,10 @@ export default {
 	margin: 10vw 0 0 0;
 	padding: 4vw 12.5vw;
 	background-color: var(--folio-purple);
+	@media screen and (max-width: 750px) {
+		display: block;
+		padding: 2rem;
+	}
 	&__email {
 		display: flex;
 		justify-content: center;
