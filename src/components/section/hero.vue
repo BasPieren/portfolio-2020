@@ -99,11 +99,14 @@ export default {
 		left: 4vw;
 		animation: arrowBounce 1s infinite ease;
 		transition: 0.4s;
+		z-index: 3;
 	}
 	&__image {
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
+		clip-path: inset(0 0 0 100%);
+		animation: imageFadeIn 1s 0.4s ease forwards;
 	}
 }
 
@@ -116,6 +119,15 @@ export default {
 	}
 	100% {
 		bottom: 4vw;
+	}
+}
+
+@keyframes imageFadeIn {
+	0% {
+		clip-path: inset(0 0 0 100%);
+	}
+	100% {
+		clip-path: inset(0 0 0 0);
 	}
 }
 </style>
