@@ -1,6 +1,8 @@
 <template>
 	<section id="work" class="work">
-		<h3>Werk.</h3>
+		<h3 class="work__heading">
+			Werk.
+		</h3>
 		<div class="work__container">
 			<div v-for="project in allWork" :key="project.name" class="work__item">
 				<router-link :to="project.url" class="work__link" @click.native="updateHeader(); updateHeroStore(project); updateActiveProject(project);"></router-link>
@@ -65,12 +67,24 @@ export default {
 	justify-content: center;
 	align-items: center;
 	padding: 10rem 0 0 0;
+	@media screen and (max-width: 750px) {
+		padding: 5rem 2rem 0 2rem;
+	}
+	&__heading {
+		@media screen and (max-width: 750px) {
+			align-self: flex-start;
+		}
+	}
 	&__container {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
 		width: 100%;
 		height: 40rem;
 		padding: 80px 0 0 0;
+		@media screen and (max-width: 750px) {
+			grid-template-columns: 1fr;
+			grid-gap: 1rem;
+		}
 	}
 	&__item {
 		position: relative;
