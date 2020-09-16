@@ -40,7 +40,13 @@ export default {
 		projectRole() { return this.$store.state.project.role },
 		projectClient() { return this.$store.state.project.client },
 		projectAgency() { return this.$store.state.project.agency },
-		projectImages() { return this.$store.state.project.images },
+		projectImages() {
+			let storeProjectImages = this.$store.state.project.images
+
+			return storeProjectImages.filter(image => {
+				return image.type !== 'featured'
+			})
+		},
 	}
 }
 </script>
