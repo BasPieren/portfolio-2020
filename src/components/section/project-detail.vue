@@ -83,6 +83,7 @@ export default {
 		grid-column-start: 1;
 		grid-column-end: 3;
 		width: 100%;
+		box-shadow: 0 0 60px 0 rgba(158,158,165,.25);
 		&:last-of-type {
 			margin: 0;
 		}

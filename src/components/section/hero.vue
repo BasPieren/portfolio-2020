@@ -11,6 +11,7 @@
 				{{ heroTitle }}
 			</h2>
 			<svgicon name="long-arrow-alt-down-solid" class="hero__icon"></svgicon>
+			<img v-if="projectImages.length > 0" :src="require(`../../static/images/${projectImages[0].src}/${projectImages[0].name}`).default" :alt="projectImages[0].alt" class="hero__image">
 		</div>
 	</section>
 </template>
@@ -20,7 +21,14 @@ export default {
 	name: "Hero",
 	computed: {
 		heroTitle() { return this.$store.state.hero.title },
-		heroCopy() { return this.$store.state.hero.copy }
+		heroCopy() { return this.$store.state.hero.copy },
+		projectImages() {
+			let storeProjectImages = this.$store.state.project.images
+
+			return storeProjectImages.filter(image => {
+				return image.type === 'featured'
+			})
+		}
 	}
 }
 </script>
@@ -91,6 +99,11 @@ export default {
 		left: 4vw;
 		animation: arrowBounce 1s infinite ease;
 		transition: 0.4s;
+	}
+	&__image {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
 	}
 }
 
