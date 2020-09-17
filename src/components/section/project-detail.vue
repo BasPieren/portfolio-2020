@@ -1,29 +1,34 @@
 <template>
 	<section class="project">
 		<div class="project__container">
+			<p class="project__copy">
+				{{ projectDescription }}
+			</p>
+		</div>
+		<div class="project__container">
 			<div class="project__content">
-				<p class="project__type bold">
+				<p class="project__type font-weight--bold">
 					Rol
 				</p>
-				<p class="project__detail italic">
+				<p class="project__detail font-style--italic">
 					{{ projectRole }}
 				</p>
 			</div>
 
 			<div class="project__content">
-				<p class="project__type bold">
+				<p class="project__type font-weight--bold">
 					Klant
 				</p>
-				<p class="project__detail italic">
+				<p class="project__detail font-style--italic">
 					{{ projectClient }}
 				</p>
 			</div>
 
 			<div class="project__content">
-				<p class="project__type bold">
+				<p class="project__type font-weight--bold">
 					Agency
 				</p>
-				<p class="project__detail italic">
+				<p class="project__detail font-style--italic">
 					{{ projectAgency }}
 				</p>
 			</div>
@@ -37,6 +42,7 @@
 export default {
 	name: "ProjectDetail",
 	computed: {
+		projectDescription() { return this.$store.state.project.description },
 		projectRole() { return this.$store.state.project.role },
 		projectClient() { return this.$store.state.project.client },
 		projectAgency() { return this.$store.state.project.agency },
@@ -60,12 +66,6 @@ export default {
 	@media screen and (max-width: 750px) {
 		grid-template-columns: 1fr;
 		padding: 5rem 2rem 0 2rem;
-	}
-	&__container {
-		grid-column: 2 / 3;
-		@media screen and (max-width: 750px) {
-			grid-column: unset;
-		}
 	}
 	&__content {
 		margin: 0 0 2vw 0;

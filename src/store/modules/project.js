@@ -2,6 +2,7 @@ const getDefaultState = () => {
 	return {
 		name: '',
 		payOff: '',
+		description: '',
 		client: '',
 		role: '',
 		agency: '',
@@ -21,6 +22,7 @@ const mutations = {
 	updateHero(state, payload) {
 		state.name = payload.name
 		state.payOff = payload['pay-off']
+		state.description = payload.description
 		state.client = payload.client
 		state.role = payload.role
 		state.agency = payload.agency
