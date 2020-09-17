@@ -2,13 +2,13 @@
 	<section class="hero">
 		<div class="hero__left">
 			<h2 class="hero__heading">
-				{{ heroTitle }}
+				{{ heroHeading }}
 			</h2>
 			<div class="hero__copy p" v-html="heroCopy"></div>
 		</div>
 		<div class="hero__right">
 			<h2 class="hero__heading">
-				{{ heroTitle }}
+				{{ heroHeading }}
 			</h2>
 			<svgicon name="long-arrow-alt-down-solid" class="hero__icon"></svgicon>
 			<img v-if="projectImages.length > 0" :src="require(`../../static/images/${projectImages[0].src}/${projectImages[0].name}`).default" :alt="projectImages[0].alt" class="hero__image">
@@ -20,12 +20,12 @@
 export default {
 	name: "Hero",
 	computed: {
-		heroTitle() { return this.$store.state.hero.title },
+		heroHeading() { return this.$store.state.hero.heading },
 		heroCopy() { return this.$store.state.hero.copy },
 		projectImages() {
-			let storeProjectImages = this.$store.state.project.images
+			let getProjectImages = this.$store.state.project.images
 
-			return storeProjectImages.filter(image => {
+			return getProjectImages.filter(image => {
 				return image.type === 'featured'
 			})
 		}
@@ -56,7 +56,6 @@ export default {
 		.hero__heading {
 			right: 0;
 			transform: translate(50%, -50%);
-			z-index: 4;
 			@media screen and (max-width: 750px) {
 				position: unset;
 				top: unset;
@@ -77,10 +76,10 @@ export default {
 		}
 		.hero__heading {
 			left: 0;
-			transform: translate(-50%, -50%);
 			color: transparent;
 			-webkit-text-stroke: 0.25rem var(--light);
-			z-index: 3;
+			transform: translate(-50%, -50%);
+			z-index: 2;
 		}
 	}
 	&__heading {
@@ -99,7 +98,7 @@ export default {
 		left: 4vw;
 		animation: arrowBounce 1s infinite ease;
 		transition: 0.4s;
-		z-index: 3;
+		z-index: 1;
 	}
 	&__image {
 		width: 100%;
@@ -107,6 +106,7 @@ export default {
 		object-fit: cover;
 		clip-path: inset(0 0 0 100%);
 		animation: imageFadeIn 1s 0.4s ease forwards;
+		z-index: 1;
 	}
 }
 

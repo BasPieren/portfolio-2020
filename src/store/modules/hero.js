@@ -1,6 +1,6 @@
 const getDefaultState = () => {
 	return {
-		title: 'Bas Pieren',
+		heading: 'Bas Pieren',
 		copy: `Hi! Ik ben <span class="font-weight--bold color--purple">Bas</span>, Front-end Developer, recent afgestudeerd <span class="font-weight--bold color--purple">Communication and Multimedia Design</span>
 		aan de HvA en opzoek naar een nieuwe uitdaging.`
 	}
@@ -16,7 +16,7 @@ const mutations = {
 		Object.assign(state, getDefaultState())
 	},
 	updateHero(state, payload) {
-		state.title = payload.name
+		state.heading = payload.name
 		state.copy = payload['pay-off']
 	}
 }
