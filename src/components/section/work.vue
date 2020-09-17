@@ -45,8 +45,8 @@ export default {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
 		width: 100%;
-		height: 40rem;
-		padding: 80px 0 0 0;
+		height: 80vh;
+		margin: 5rem 0 0 0;
 		@media screen and (max-width: 750px) {
 			grid-template-columns: 1fr;
 			grid-gap: 1rem;
