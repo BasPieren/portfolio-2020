@@ -3,22 +3,22 @@
 		<ul class="social__list">
 			<li class="scoail__item">
 				<a class="social__link" href="https://www.linkedin.com/in/bas-pieren-673497100/" target="_blank">
-					<svgicon name="linkedin-in-brands" class="social__icon"></svgicon>
+					<svgicon name="linkedin-in-brands" class="social__icon svg-icon--normal"></svgicon>
 				</a>
 			</li>
 			<li class="scoail__item">
 				<a class="social__link" href="https://github.com/BasPieren" target="_blank">
-					<svgicon name="github-brands" class="social__icon"></svgicon>
+					<svgicon name="github-brands" class="social__icon svg-icon--normal"></svgicon>
 				</a>
 			</li>
 			<li class="scoail__item">
 				<a class="social__link" href="https://twitter.com/BasPieren" target="_blank">
-					<svgicon name="twitter-brands" class="social__icon"></svgicon>
+					<svgicon name="twitter-brands" class="social__icon svg-icon--normal"></svgicon>
 				</a>
 			</li>
 			<li class="scoail__item">
 				<a class="social__link" href="https://www.instagram.com/baspieren/" target="_blank">
-					<svgicon name="instagram-brands" class="social__icon"></svgicon>
+					<svgicon name="instagram-brands" class="social__icon svg-icon--normal"></svgicon>
 				</a>
 			</li>
 		</ul>

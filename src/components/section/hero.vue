@@ -10,7 +10,7 @@
 			<h2 class="hero__heading">
 				{{ heroHeading }}
 			</h2>
-			<svgicon name="long-arrow-alt-down-solid" class="hero__icon"></svgicon>
+			<svgicon name="long-arrow-alt-down-solid" class="hero__icon svg-icon--normal"></svgicon>
 			<img v-if="projectImages.length > 0" :src="require(`../../static/images/${projectImages[0].src}/${projectImages[0].name}`).default" :alt="projectImages[0].alt" class="hero__image">
 		</div>
 	</section>

@@ -5,7 +5,7 @@
 				Heb jij een Front-end developer nodig? Stuur een berichtje, dan kunnen we een keer koffie drinken. &#x2615;
 			</p>
 			<a class="footer__email" href="mailto:bas.pieren@quicknet.nl">
-				<svgicon name="email-24px"></svgicon>
+				<svgicon name="envelope-solid" class="footer__icon svg-icon--medium"></svgicon>
 			</a>
 			<div class="footer__disclaimer">
 				<p class="font-size--small color--light">
@@ -47,6 +47,16 @@ export default {
 		color: var(--folio-purple);
 		background-color: var(--light);
 		border-radius: 50%;
+		&:hover {
+			.footer__icon {
+				transform: scale(1.2);
+			}
+		}
+	}
+	&__icon {
+		width: 32px;
+		height: 32px;
+		transition: 0.4s;
 	}
 	&__disclaimer {
 		display: flex;

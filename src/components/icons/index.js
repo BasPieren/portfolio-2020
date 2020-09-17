@@ -1,5 +1,5 @@
 /* eslint-disable */
-require('./email-24px')
+require('./envelope-solid')
 require('./github-brands')
 require('./instagram-brands')
 require('./linkedin-in-brands')
