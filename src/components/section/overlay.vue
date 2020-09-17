@@ -1,30 +1,27 @@
 <template>
 	<section :class="['overlay', { small: overlayScrollPosition }]">
-		<div class="overlay__left"></div>
-		<div class="overlay__right">
-			<ul class="social__list">
-				<li class="scoail__item">
-					<a class="social__link" href="https://www.linkedin.com/in/bas-pieren-673497100/" target="_blank">
-						<svgicon name="linkedin-in-brands" class="social__icon"></svgicon>
-					</a>
-				</li>
-				<li class="scoail__item">
-					<a class="social__link" href="https://github.com/BasPieren" target="_blank">
-						<svgicon name="github-brands" class="social__icon"></svgicon>
-					</a>
-				</li>
-				<li class="scoail__item">
-					<a class="social__link" href="https://twitter.com/BasPieren" target="_blank">
-						<svgicon name="twitter-brands" class="social__icon"></svgicon>
-					</a>
-				</li>
-				<li class="scoail__item">
-					<a class="social__link" href="https://www.instagram.com/baspieren/" target="_blank">
-						<svgicon name="instagram-brands" class="social__icon"></svgicon>
-					</a>
-				</li>
-			</ul>
-		</div>
+		<ul class="social__list">
+			<li class="scoail__item">
+				<a class="social__link" href="https://www.linkedin.com/in/bas-pieren-673497100/" target="_blank">
+					<svgicon name="linkedin-in-brands" class="social__icon"></svgicon>
+				</a>
+			</li>
+			<li class="scoail__item">
+				<a class="social__link" href="https://github.com/BasPieren" target="_blank">
+					<svgicon name="github-brands" class="social__icon"></svgicon>
+				</a>
+			</li>
+			<li class="scoail__item">
+				<a class="social__link" href="https://twitter.com/BasPieren" target="_blank">
+					<svgicon name="twitter-brands" class="social__icon"></svgicon>
+				</a>
+			</li>
+			<li class="scoail__item">
+				<a class="social__link" href="https://www.instagram.com/baspieren/" target="_blank">
+					<svgicon name="instagram-brands" class="social__icon"></svgicon>
+				</a>
+			</li>
+		</ul>
 	</section>
 </template>
 
@@ -60,55 +57,25 @@ export default {
 .overlay {
 	position: fixed;
 	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-end;
+	padding: 0 8vw 0 0;
 	width: 100vw;
 	height: 100%;
+	transition: 0.4s;
 	pointer-events: none;
 	z-index: 4;
+	@media screen and (max-width: 750px) {
+		padding: 0;
+	}
 	&.small {
-		.overlay__left {
-			padding: 0;
-		}
-		.overlay__right {
-			padding: 0;
-		}
-		.language__list {
-			padding: 1rem;
-			height: 12%;
-			&::after {
-				clip-path: inset(0 0 0 0);
-			}
-		}
-		.language__button {
-			color: var(--light);
-		}
+		padding: 0;
 		.social__list {
 			padding: 1rem;
 			&::after {
 				clip-path: inset(0 0 0 0);
 			}
-		}
-	}
-	&__left {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-		justify-content: center;
-		padding: 0 0 0 8vw;
-		width: 50vw;
-		height: 100%;
-		transition: 0.4s;
-	}
-	&__right {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-end;
-		justify-content: center;
-		padding: 0 8vw 0 0;
-		width: 50vw;
-		height: 100%;
-		transition: 0.4s;
-		@media screen and (max-width: 750px) {
-			padding: 0;
 		}
 	}
 }
@@ -119,11 +86,12 @@ export default {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		height: 25%;
+		height: 25vh;
+		list-style-type: none;
 		transition: 0.4s;
 		@media screen and (max-width: 750px) {
 			padding: 1rem;
-			height: 20%;
+			height: 20vh;
 			background-color: var(--folio-purple);
 		}
 		&::after {
