@@ -1,22 +1,20 @@
 <template>
 	<footer id="footer" class="footer">
 		<div class="footer__container">
-			<p class="white">
+			<p class="color--light">
 				Heb jij een Front-end developer nodig? Stuur een berichtje, dan kunnen we een keer koffie drinken. &#x2615;
 			</p>
 			<a class="footer__email" href="mailto:bas.pieren@quicknet.nl">
 				<svgicon name="email-24px"></svgicon>
 			</a>
 			<div class="footer__disclaimer">
-				<p class="white small">
+				<p class="font-size--small color--light">
 					&copy; 2020 Bas Pieren
 				</p>
-				<p class="white small">
+				<p class="font-size--small color--light">
 					Iconen zijn afkomstig van <a class="footer__link" href="https://fontawesome.com/" target="_blank">Font Awesome</a> & <a class="footer__link" href="ial.io/resources/icons/" target="_blank">Material icons</a>.
 				</p>
 			</div>
-		</div>
-		<div class="footer__container">
 		</div>
 	</footer>
 </template>
