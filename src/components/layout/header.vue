@@ -58,10 +58,7 @@ export default {
 		text-decoration: none;
 	}
 	&__nav {
-		width: 25%;
-		@media screen and (max-width: 1024px) {
-			width: 35%;
-		}
+		width: 25vw;
 		@media screen and (max-width: 750px) {
 			display: none;
 		}
