@@ -6,12 +6,12 @@
 			</h2>
 			<div class="hero__copy p" v-html="heroCopy"></div>
 		</div>
-		<div class="hero__right">
+		<div :class="['hero__right', {'hero__gradient' : projectState}]">
 			<h2 class="hero__heading">
 				{{ heroHeading }}
 			</h2>
 			<svgicon name="long-arrow-alt-down-solid" class="hero__icon svg-icon--normal"></svgicon>
-			<img v-if="projectImages.length > 0" :src="require(`../../static/images/${projectImages[0].src}/${projectImages[0].name}`).default" :alt="projectImages[0].alt" class="hero__image">
+			<img v-if="projectState" :src="require(`../../static/images/${projectImages[0].src}/${projectImages[0].name}`).default" :alt="projectImages[0].alt" class="hero__image">
 		</div>
 	</section>
 </template>
@@ -20,8 +20,15 @@
 export default {
 	name: "Hero",
 	computed: {
-		heroHeading() { return this.$store.state.hero.heading },
-		heroCopy() { return this.$store.state.hero.copy },
+		heroHeading() {
+			return this.$store.state.hero.heading
+		},
+		heroCopy() {
+			return this.$store.state.hero.copy
+		},
+		projectState() {
+			return this.$store.state.project.isActive
+		},
 		projectImages() {
 			let getProjectImages = this.$store.state.project.images
 
@@ -80,6 +87,20 @@ export default {
 			-webkit-text-stroke: 0.25rem var(--light);
 			transform: translate(-50%, -50%);
 			z-index: 2;
+		}
+	}
+	&__gradient {
+		&::after {
+			content: '';
+			position: absolute;
+			display: block;
+			width: 100%;
+			height: 100%;
+			bottom: 0;
+			left: 0;
+			background-image: linear-gradient(180deg,transparent,rgba(0,0,0,.4));
+			clip-path: inset(0 0 0 100%);
+			animation: imageFadeIn 1s 0.4s ease forwards;
 		}
 	}
 	&__heading {

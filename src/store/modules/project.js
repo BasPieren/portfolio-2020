@@ -1,5 +1,6 @@
 const getDefaultState = () => {
 	return {
+		isActive: false,
 		name: '',
 		payOff: '',
 		description: '',
@@ -20,6 +21,7 @@ const mutations = {
 		Object.assign(state, getDefaultState())
 	},
 	updateHero(state, payload) {
+		state.isActive = true
 		state.name = payload.name
 		state.payOff = payload['pay-off']
 		state.description = payload.description
