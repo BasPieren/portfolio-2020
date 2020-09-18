@@ -9,9 +9,7 @@ import '@/components/icons/index.js'
 
 Vue.config.productionTip = false
 
-Vue.use(VueSvgIcon, {
-	tagName: 'svgicon'
-})
+Vue.use(VueSvgIcon, { tagName: 'svgicon' })
 Vue.use(VueScrollTo)
 
 new Vue({
