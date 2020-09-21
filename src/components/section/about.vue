@@ -1,5 +1,6 @@
 <template>
 	<section id="about" class="about">
+		<div id="sticky-target"></div>
 		<div class="about__container">
 			<div class="about__content">
 				<h3 class="about__heading">
@@ -95,7 +96,7 @@
 			</div>
 		</div>
 		<div class="about__container">
-			<img :src="require('../../static/images/bas.jpg').default" class="about__image">
+			<img data-scroll data-scroll-sticky data-scroll-target="#sticky-target" :src="require('../../static/images/bas.jpg').default" class="about__image">
 		</div>
 	</section>
 </template>
@@ -108,6 +109,7 @@ export default {
 
 <style lang="scss">
 .about {
+	position: relative;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-gap: 4vw;
@@ -131,12 +133,15 @@ export default {
 		margin-top: 0.25rem;
 	}
 	&__image {
-		top: 4vw;
 		width: 100%;
 		height: auto;
-		@media screen and (max-width: 750px) {
-			top: 2rem;
-		}
 	}
+}
+
+#sticky-target {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 90%;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-	<section class="hero">
+	<section id="#hero" class="hero">
 		<div class="hero__left">
 			<h2 class="hero__heading">
 				{{ heroHeading }}
