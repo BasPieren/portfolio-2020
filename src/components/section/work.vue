@@ -1,6 +1,6 @@
 <template>
 	<section id="work" class="work">
-		<h3 class="work__heading">
+		<h3 data-scroll data-scroll-speed="2" class="work__heading">
 			Werk.
 		</h3>
 		<div class="work__container">

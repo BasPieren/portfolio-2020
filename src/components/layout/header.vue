@@ -1,5 +1,5 @@
 <template>
-	<header class="header">
+	<header data-scroll data-scroll-speed="2" class="header">
 		<router-link :to="'/'" class="header__link" @click.native="resetHeroState">
 			<div class="header__heading heading--h3 color--dark" v-html="getHeaderHeading"></div>
 		</router-link>
@@ -47,6 +47,7 @@ export default {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	top: 3.75vw;
 	right: 0;
 	left: 0;
 	padding: 3.75rem 8vw;
