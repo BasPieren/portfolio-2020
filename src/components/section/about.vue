@@ -1,7 +1,7 @@
 <template>
 	<section id="about" class="about">
-		<div id="sticky-target"></div>
 		<div class="about__container">
+			<div id="sticky-target"></div>
 			<div class="about__content">
 				<h3 class="about__heading">
 					About.
@@ -117,6 +117,9 @@ export default {
 	@media screen and (max-width: 750px) {
 		padding: 5rem 2rem 0 2rem;
 	}
+	&__container {
+		position: relative;
+	}
 	&__content {
 		margin: 0 0 4vw 0;
 		&:last-of-type {
@@ -140,8 +143,8 @@ export default {
 
 #sticky-target {
 	position: absolute;
-	bottom: 0;
+	top: -4vw;
 	width: 100%;
-	height: 90%;
+	height: 100%;
 }
 </style>
