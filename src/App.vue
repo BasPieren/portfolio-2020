@@ -27,25 +27,39 @@ export default {
 			scrollIns: null
 		}
 	},
+	watch: {
+		$route() {
+			const _self = this
+
+			this.lms.destroy()
+			this.$nextTick(() => {
+				_self.initLocoScroll()
+			})
+			window.setTimeout(() => {
+				this.lms.update()
+			}, 3000)
+		}
+	},
 	mounted() {
 		const _self = this
+
 		this.$nextTick(() => {
 			_self.initLocoScroll()
 		})
 		window.setTimeout(() => {
-			_self.scroll.update()
+			_self.lms.update()
 		}, 3000)
 	},
 	methods: {
 		initLocoScroll() {
 			const _self = this
-			this.scroll = new this.$LocomotiveScroll({
+			this.lms = new this.$LocomotiveScroll({
 				el: _self.$refs['scrollSections'],
 				smooth: true,
 				getDirection: true
 			})
 		}
-	}
+	},
 }
 </script>
 

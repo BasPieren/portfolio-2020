@@ -20,7 +20,7 @@ const mutations = {
 	resetState(state) {
 		Object.assign(state, getDefaultState())
 	},
-	updateHero(state, payload) {
+	updateActiveProject(state, payload) {
 		state.isActive = true
 		state.name = payload.name
 		state.payOff = payload['pay-off']
