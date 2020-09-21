@@ -1,5 +1,5 @@
 <template>
-	<div id="app">
+	<div id="app" ref="scrollSections">
 		<LayoutHeader />
 		<Overlay />
 		<Hero />
@@ -22,6 +22,30 @@ export default {
 		Hero,
 		LayoutFooter
 	},
+	data() {
+		return {
+			scrollIns: null
+		}
+	},
+	mounted() {
+		const _self = this
+		this.$nextTick(() => {
+			_self.initLocoScroll()
+		})
+		window.setTimeout(() => {
+			_self.scroll.update()
+		}, 3000)
+	},
+	methods: {
+		initLocoScroll() {
+			const _self = this
+			this.scroll = new this.$LocomotiveScroll({
+				el: _self.$refs['scrollSections'],
+				smooth: true,
+				getDirection: true
+			})
+		}
+	}
 }
 </script>
 

@@ -62,7 +62,7 @@ export default {
 	align-items: flex-end;
 	padding: 0 8vw 0 0;
 	width: 100vw;
-	height: 100%;
+	height: 100vh;
 	transition: 0.4s;
 	pointer-events: none;
 	z-index: 4;
