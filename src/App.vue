@@ -1,10 +1,12 @@
 <template>
-	<div id="app" ref="scrollSections">
-		<LayoutHeader />
+	<div id="app">
 		<Overlay />
-		<Hero />
-		<router-view></router-view>
-		<LayoutFooter />
+		<div class="layout">
+			<LayoutHeader />
+			<Hero />
+			<router-view></router-view>
+			<LayoutFooter />
+		</div>
 	</div>
 </template>
 
@@ -44,22 +46,23 @@ export default {
 		const _self = this
 
 		this.$nextTick(() => {
+			console.log('Init Lms')
 			_self.initLocoScroll()
 		})
 		window.setTimeout(() => {
+			console.log('Update Lms init')
 			_self.lms.update()
 		}, 3000)
 	},
 	methods: {
 		initLocoScroll() {
-			const _self = this
 			this.lms = new this.$LocomotiveScroll({
-				el: _self.$refs['scrollSections'],
+				el: document.querySelector('.layout'),
 				smooth: true,
 				getDirection: true
 			})
 		}
-	},
+	}
 }
 </script>
 

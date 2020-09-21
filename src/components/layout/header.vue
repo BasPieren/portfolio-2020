@@ -6,17 +6,17 @@
 		<nav class="header__nav">
 			<ul class="header__list">
 				<li class="header__item">
-					<button v-scroll-to="'#work'" class="header__button font-weight--medium color--light">
+					<button class="header__button font-weight--medium color--light" @click="LmsScrollTo('#work')">
 						Werk.
 					</button>
 				</li>
 				<li class="header__item">
-					<button v-scroll-to="'#about'" class="header__button font-weight--medium color--light">
+					<button class="header__button font-weight--medium color--light" @click="LmsScrollTo('#about')">
 						Over.
 					</button>
 				</li>
 				<li class="header__item">
-					<button v-scroll-to="'#footer'" class="header__button font-weight--medium color--light">
+					<button class="header__button font-weight--medium color--light" @click="LmsScrollTo('#footer')">
 						Contact.
 					</button>
 				</li>
@@ -36,6 +36,11 @@ export default {
 	methods: {
 		resetHeroState() {
 			this.$store.dispatch('resetHeroState')
+		},
+		LmsScrollTo(target) {
+			const lms = new this.$LocomotiveScroll()
+
+			lms.scrollTo(target)
 		}
 	}
 }
