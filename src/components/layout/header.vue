@@ -3,7 +3,7 @@
 		<router-link :to="'/'" class="header__link" @click.native="resetHeroState">
 			<div class="header__heading heading--h3 color--dark" v-html="getHeaderHeading"></div>
 		</router-link>
-		<nav class="header__nav">
+		<nav :class="['header__nav', {'header__nav--hide': isProjectPage}]">
 			<ul class="header__list">
 				<li class="header__item">
 					<button v-scroll-to="'#work'" class="header__button font-weight--medium color--light">
@@ -28,9 +28,23 @@
 <script>
 export default {
 	name: "Header",
+	data() {
+		return {
+			isProjectPage: false
+		}
+	},
 	computed: {
 		getHeaderHeading() {
 			return this.$store.state.header.heading
+		}
+	},
+	watch: {
+		$route() {
+			if (this.$route.path !== '/') {
+				this.isProjectPage = true
+			} else {
+				this.isProjectPage = false
+			}
 		}
 	},
 	methods: {
@@ -60,6 +74,9 @@ export default {
 	&__nav {
 		width: 25vw;
 		@media screen and (max-width: 750px) {
+			display: none;
+		}
+		&--hide {
 			display: none;
 		}
 	}
