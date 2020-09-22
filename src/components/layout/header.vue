@@ -1,22 +1,22 @@
 <template>
-	<header data-scroll data-scroll-speed="2" class="header">
+	<header class="header">
 		<router-link :to="'/'" class="header__link" @click.native="resetHeroState">
 			<div class="header__heading heading--h3 color--dark" v-html="getHeaderHeading"></div>
 		</router-link>
 		<nav class="header__nav">
 			<ul class="header__list">
 				<li class="header__item">
-					<button class="header__button font-weight--medium color--light" @click="LmsScrollTo('#work')">
+					<button v-scroll-to="'#work'" class="header__button font-weight--medium color--light">
 						Werk.
 					</button>
 				</li>
 				<li class="header__item">
-					<button class="header__button font-weight--medium color--light" @click="LmsScrollTo('#about')">
+					<button v-scroll-to="'#about'" class="header__button font-weight--medium color--light">
 						Over.
 					</button>
 				</li>
 				<li class="header__item">
-					<button class="header__button font-weight--medium color--light" @click="LmsScrollTo('#footer')">
+					<button v-scroll-to="'#footer'" class="header__button font-weight--medium color--light">
 						Contact.
 					</button>
 				</li>
@@ -37,11 +37,6 @@ export default {
 		resetHeroState() {
 			this.$store.dispatch('resetHeroState')
 		},
-		LmsScrollTo(target) {
-			const lms = new this.$LocomotiveScroll()
-
-			lms.scrollTo(target)
-		}
 	}
 }
 </script>
@@ -52,7 +47,6 @@ export default {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	top: 3.75vw;
 	right: 0;
 	left: 0;
 	padding: 3.75rem 8vw;

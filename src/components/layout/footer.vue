@@ -1,10 +1,10 @@
 <template>
 	<footer id="footer" class="footer">
 		<div class="footer__container">
-			<p data-scroll data-scroll-speed="1" class="color--light">
+			<p class="color--light">
 				Heb jij een Front-end developer nodig? Stuur een berichtje, dan kunnen we een keer koffie drinken. &#x2615;
 			</p>
-			<a data-scroll data-scroll-speed="1" class="footer__email" href="mailto:bas.pieren@quicknet.nl">
+			<a class="footer__email" href="mailto:bas.pieren@quicknet.nl">
 				<svgicon name="envelope-solid" class="footer__icon svg-icon--medium"></svgicon>
 			</a>
 			<div class="footer__disclaimer">

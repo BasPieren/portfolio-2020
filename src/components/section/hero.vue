@@ -4,7 +4,7 @@
 			<h2 class="hero__heading">
 				{{ heroHeading }}
 			</h2>
-			<div data-scroll data-scroll-speed="1" class="hero__copy p" v-html="heroCopy"></div>
+			<div class="hero__copy p" v-html="heroCopy"></div>
 		</div>
 		<div :class="['hero__right', {'hero__gradient' : projectState}]">
 			<h2 class="hero__heading">

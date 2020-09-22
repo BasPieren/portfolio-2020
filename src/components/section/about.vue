@@ -1,7 +1,6 @@
 <template>
 	<section id="about" class="about">
 		<div class="about__container">
-			<div id="sticky-target"></div>
 			<div class="about__content">
 				<h3 class="about__heading">
 					About.
@@ -96,7 +95,7 @@
 			</div>
 		</div>
 		<div class="about__container">
-			<img data-scroll data-scroll-sticky data-scroll-target="#sticky-target" :src="require('../../static/images/bas.jpg').default" class="about__image">
+			<img :src="require('../../static/images/bas.jpg').default" class="about__image">
 		</div>
 	</section>
 </template>
@@ -117,9 +116,6 @@ export default {
 	@media screen and (max-width: 750px) {
 		padding: 5rem 2rem 0 2rem;
 	}
-	&__container {
-		position: relative;
-	}
 	&__content {
 		margin: 0 0 4vw 0;
 		&:last-of-type {
@@ -136,15 +132,10 @@ export default {
 		margin-top: 0.25rem;
 	}
 	&__image {
+		position: sticky;
+		top: 4vw;
 		width: 100%;
 		height: auto;
 	}
-}
-
-#sticky-target {
-	position: absolute;
-	top: -4vw;
-	width: 100%;
-	height: 100%;
 }
 </style>

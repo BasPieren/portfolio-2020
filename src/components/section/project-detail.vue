@@ -1,11 +1,11 @@
 <template>
 	<section class="project">
 		<div class="project__container">
-			<p data-scroll data-scroll-speed="2" class="project__copy">
+			<p class="project__copy">
 				{{ projectDescription }}
 			</p>
 		</div>
-		<div data-scroll data-scroll-speed="1" class="project__container">
+		<div class="project__container">
 			<div class="project__content">
 				<p class="project__type font-weight--bold">
 					Rol
