@@ -94,7 +94,7 @@
 				</p>
 			</div>
 		</div>
-		<div class="about__container">
+		<div data-aos="fade-up" data-aos-delay="400" class="about__container">
 			<img :src="require('../../static/images/bas.jpg').default" class="about__image">
 		</div>
 	</section>

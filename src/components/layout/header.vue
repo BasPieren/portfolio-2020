@@ -1,5 +1,5 @@
 <template>
-	<header class="header">
+	<header data-aos="fade-down" data-aos-delay="2000" class="header">
 		<router-link :to="'/'" class="header__link" @click.native="resetHeroState">
 			<div class="header__heading heading--h3 color--dark" v-html="getHeaderHeading"></div>
 		</router-link>

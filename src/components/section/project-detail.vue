@@ -5,7 +5,7 @@
 				{{ projectDescription }}
 			</p>
 		</div>
-		<div data-aos="fade-up" data-aos-delay="300" class="project__container">
+		<div data-aos="fade-up" data-aos-delay="400" class="project__container">
 			<div class="project__content">
 				<p class="project__type font-weight--bold">
 					Rol
@@ -14,7 +14,6 @@
 					{{ projectRole }}
 				</p>
 			</div>
-
 			<div class="project__content">
 				<p class="project__type font-weight--bold">
 					Klant
@@ -23,7 +22,6 @@
 					{{ projectClient.name }}
 				</a>
 			</div>
-
 			<div class="project__content">
 				<p class="project__type font-weight--bold">
 					Agency
@@ -33,7 +31,6 @@
 				</a>
 			</div>
 		</div>
-
 		<img v-for="image in projectImages" :key="image.index" data-aos="fade-up" data-aos-delay="300" :src="require(`../../static/images/${image.src}/${image.name}`).default" :alt="image.alt" class="project__image">
 	</section>
 </template>

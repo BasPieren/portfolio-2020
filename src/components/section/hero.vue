@@ -56,6 +56,8 @@ export default {
 		width: 50vw;
 		height: 100%;
 		overflow: hidden;
+		clip-path: inset(0 100% 0 0);
+		animation: clipPathToRight 1.5s 0.4s ease forwards;
 		@media screen and (max-width: 750px) {
 			padding: 0 2rem;
 			width: 100%;
@@ -78,6 +80,8 @@ export default {
 		color: var(--light);
 		background-color: var(--folio-purple);
 		overflow: hidden;
+		clip-path: inset(0 0 0 100%);
+		animation: clipPathToLeft 1.5s 0.4s ease forwards;
 		@media screen and (max-width: 750px) {
 			display: none;
 		}
@@ -100,7 +104,7 @@ export default {
 			left: 0;
 			background-image: linear-gradient(180deg,transparent,rgba(0,0,0,.4));
 			clip-path: inset(0 0 0 100%);
-			animation: imageFadeIn 1s 0.4s ease forwards;
+			animation: clipPathToLeft 1s 0.4s ease forwards;
 		}
 	}
 	&__heading {
@@ -126,29 +130,8 @@ export default {
 		height: 100%;
 		object-fit: cover;
 		clip-path: inset(0 0 0 100%);
-		animation: imageFadeIn 1s 0.4s ease forwards;
+		animation: clipPathToLeft 1s 0.4s ease forwards;
 		z-index: 1;
-	}
-}
-
-@keyframes arrowBounce {
-	0% {
-		bottom: 4vw;
-	}
-	50% {
-		bottom: 4.5vw;
-	}
-	100% {
-		bottom: 4vw;
-	}
-}
-
-@keyframes imageFadeIn {
-	0% {
-		clip-path: inset(0 0 0 100%);
-	}
-	100% {
-		clip-path: inset(0 0 0 0);
 	}
 }
 </style>

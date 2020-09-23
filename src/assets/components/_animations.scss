@@ -1,0 +1,47 @@
+@keyframes clipPathToTop {
+	from {
+		clip-path: inset(100% 0 0 0);
+	}
+	to {
+		clip-path: inset(0 0 0 0);
+	}
+}
+
+@keyframes clipPathToRight {
+	from {
+		clip-path: inset(0 100% 0 0);
+	}
+	to {
+		clip-path: inset(0 0 0 0);
+	}
+}
+
+@keyframes clipPathToBottom {
+	from {
+		clip-path: inset(0 0 100% 0);
+	}
+	to {
+		clip-path: inset(0 0 0 0);
+	}
+}
+
+@keyframes clipPathToLeft {
+	from {
+		clip-path: inset(0 0 0 100%);
+	}
+	to {
+		clip-path: inset(0 0 0 0);
+	}
+}
+
+@keyframes arrowBounce {
+	0% {
+		bottom: 4vw;
+	}
+	50% {
+		bottom: 4.5vw;
+	}
+	100% {
+		bottom: 4vw;
+	}
+}
