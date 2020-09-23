@@ -39,10 +39,18 @@
 export default {
 	name: "ProjectDetail",
 	computed: {
-		projectDescription() { return this.$store.state.project.description },
-		projectRole() { return this.$store.state.project.role },
-		projectClient() { return this.$store.state.project.client },
-		projectAgency() { return this.$store.state.project.agency },
+		projectDescription() {
+			return this.$store.state.project.description
+		},
+		projectRole() {
+			return this.$store.state.project.role
+		},
+		projectClient() {
+			return this.$store.state.project.client
+		},
+		projectAgency() {
+			return this.$store.state.project.agency
+		},
 		projectImages() {
 			let storeProjectImages = this.$store.state.project.images
 
