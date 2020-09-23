@@ -1,10 +1,10 @@
 <template>
 	<section id="work" class="work">
-		<h3 class="work__heading">
+		<h3 data-aos="fade-up" class="work__heading">
 			Werk.
 		</h3>
 		<div class="work__container">
-			<ProjectTile v-for="project in allProjects" :key="project.name" :project="project" />
+			<ProjectTile v-for="project in allProjects" :key="project.name" :project="project" data-aos="fade-up" data-aos-delay="300" />
 		</div>
 	</section>
 </template>

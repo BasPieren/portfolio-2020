@@ -1,11 +1,11 @@
 <template>
 	<section class="project">
-		<div class="project__container">
+		<div data-aos="fade-up" data-aos-delay="300" class="project__container">
 			<p class="project__copy">
 				{{ projectDescription }}
 			</p>
 		</div>
-		<div class="project__container">
+		<div data-aos="fade-up" data-aos-delay="300" class="project__container">
 			<div class="project__content">
 				<p class="project__type font-weight--bold">
 					Rol
@@ -34,7 +34,7 @@
 			</div>
 		</div>
 
-		<img v-for="image in projectImages" :key="image.index" :src="require(`../../static/images/${image.src}/${image.name}`).default" :alt="image.alt" class="project__image">
+		<img v-for="image in projectImages" :key="image.index" data-aos="fade-up" data-aos-delay="300" :src="require(`../../static/images/${image.src}/${image.name}`).default" :alt="image.alt" class="project__image">
 	</section>
 </template>
 

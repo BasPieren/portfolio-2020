@@ -1,7 +1,7 @@
 <template>
 	<section id="about" class="about">
 		<div class="about__container">
-			<div class="about__content">
+			<div data-aos="fade-up" data-aos-delay="300" class="about__content">
 				<h3 class="about__heading">
 					About.
 				</h3>
@@ -15,7 +15,7 @@
 					Vue/Nuxt en PHP.
 				</p>
 			</div>
-			<div class="about__content">
+			<div data-aos="fade-up" data-aos-delay="300" class="about__content">
 				<h4 class="about__sub-heading">
 					Studies
 				</h4>
@@ -49,7 +49,7 @@
 					VMBO Kader - Grafimedia
 				</p>
 			</div>
-			<div class="about__content">
+			<div data-aos="fade-up" data-aos-delay="300" class="about__content">
 				<h4 class="about__sub-heading">
 					Ervaring
 				</h4>
