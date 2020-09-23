@@ -15,7 +15,7 @@ Vue.use(VueSvgIcon, { tagName: 'svgicon' })
 Vue.use(VueScrollTo)
 
 new Vue({
-	created () {
+	created() {
 		AOS.init()
 	},
 	router,
