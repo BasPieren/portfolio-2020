@@ -4,9 +4,15 @@
 			"name": "Ride Out.",
 			"pay-off": "Here to connect and inspire.",
 			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-			"client": "Ride Out Amsterdam",
+			"client": {
+				"name": "Ride Out Amsterdam",
+				"link": "https://rideout.amsterdam/"
+			},
 			"role": "Development",
-			"agency": "Matise",
+			"agency": {
+				"name": "Matise",
+				"link": "https://www.matise.nl/"
+			},
 			"tags": [
 				"Nuxt",
 				"SCSS",
@@ -44,9 +50,15 @@
 			"name": "JAN©",
 			"pay-off": "Op JAN© kun je rekenen.",
 			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-			"client": "JAN©",
+			"client": {
+				"name": "JAN",
+				"link": "https://jan.nl/"
+			},
 			"role": "Development",
-			"agency": "Matise",
+			"agency": {
+				"name": "Matise",
+				"link": "https://www.matise.nl/"
+			},
 			"tags": [
 				"Nuxt",
 				"SCSS",
@@ -86,7 +98,10 @@
 			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
 			"client": "Go Your Own Way",
 			"role": "Development",
-			"agency": "Matise",
+			"agency": {
+				"name": "Matise",
+				"link": "https://www.matise.nl/"
+			},
 			"tags": [
 				"PHP",
 				"SCSS",

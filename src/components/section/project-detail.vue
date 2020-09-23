@@ -19,18 +19,18 @@
 				<p class="project__type font-weight--bold">
 					Klant
 				</p>
-				<p class="project__detail font-style--italic">
-					{{ projectClient }}
-				</p>
+				<a :href="projectClient.link" target="_blank" class="p project__detail font-style--italic color--purple">
+					{{ projectClient.name }}
+				</a>
 			</div>
 
 			<div class="project__content">
 				<p class="project__type font-weight--bold">
 					Agency
 				</p>
-				<p class="project__detail font-style--italic">
-					{{ projectAgency }}
-				</p>
+				<a :href="projectAgency.link" target="_blank" class="p project__detail font-style--italic color--purple">
+					{{ projectAgency.name }}
+				</a>
 			</div>
 		</div>
 
