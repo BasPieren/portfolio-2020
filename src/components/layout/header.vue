@@ -3,7 +3,7 @@
 		<router-link :to="'/'" class="header__link" @click.native="resetHeroState">
 			<div class="header__heading heading--h3 color--dark" v-html="getHeaderHeading"></div>
 		</router-link>
-		<nav :class="['header__nav', {'header__nav--hide': isProjectPage}]">
+		<nav :class="['header__nav', {'header__nav--hide': !checkIfHomeIsActive}]">
 			<ul class="header__list">
 				<li class="header__item">
 					<button v-scroll-to="'#work'" class="header__button font-weight--medium color--light">
@@ -28,15 +28,9 @@
 <script>
 export default {
 	name: "Header",
-	data() {
-		return {
-			isMobile: false,
-			isProjectPage: false
-		}
-	},
 	computed: {
 		headerBindings() {
-			if (!this.isMobile) {
+			if (!this.$store.state.windowSize.isMobile) {
 				return {
 					"data-aos": "fade-down",
 					"data-aos-delay": "2000"
@@ -47,30 +41,14 @@ export default {
 		},
 		getHeaderHeading() {
 			return this.$store.state.header.heading
+		},
+		checkIfHomeIsActive() {
+			return this.$store.state.activeRoute.homeIsActive
 		}
-	},
-	watch: {
-		$route() {
-			if (this.$route.path !== '/') {
-				this.isProjectPage = true
-			} else {
-				this.isProjectPage = false
-			}
-		}
-	},
-	mounted() {
-		this.checkWindowSize()
 	},
 	methods: {
 		resetHeroState() {
 			this.$store.dispatch('resetHeroState')
-		},
-		checkWindowSize() {
-			let getViewportWidth = window.innerWidth
-
-			if (getViewportWidth <= 750) {
-				this.isMobile = true
-			}
 		}
 	}
 }

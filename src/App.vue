@@ -21,6 +21,25 @@ export default {
 		Overlay,
 		Hero,
 		LayoutFooter
+	},
+	watch: {
+		$route() {
+			if (this.$route.path !== '/') {
+				this.$store.commit('homeNotActive')
+			}
+		}
+	},
+	mounted() {
+		this.checkWindowSize()
+	},
+	methods: {
+		checkWindowSize() {
+			let getViewportWidth = window.innerWidth
+
+			if (getViewportWidth <= 750) {
+				this.$store.commit('setWindowSizeMobile')
+			}
+		}
 	}
 }
 </script>
