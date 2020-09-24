@@ -2,8 +2,8 @@
 	"work": [
 		{
 			"name": "Ride Out.",
-			"pay-off": "Here to connect and inspire.",
-			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+			"pay-off": "Hier om te verbinden en te inspireren.",
+			"description": "Ride Out is een experimentele plek die bestaat om mensen te inspireren in hun passie voor fietsen en om hun unieke versie van vrijheid te ontdekken. Ride Out vind je in het gloednieuwe mobiliteitscentrum Move in de Olympische wijk van Amsterdam.",
 			"client": {
 				"name": "Ride Out Amsterdam",
 				"link": "https://rideout.amsterdam/"
@@ -27,19 +27,19 @@
 				},
 				{
 					"name": "Screenshot 2020-09-15 at 14.17.15.png",
-					"alt": "Dit is een test",
+					"alt": "De Ride Out home pagina",
 					"src": "rideout",
 					"type": "website"
 				},
 				{
 					"name": "Screenshot 2020-09-15 at 14.17.32.png",
-					"alt": "Dit is een test",
+					"alt": "De Ride Out store pagina",
 					"src": "rideout",
 					"type": "website"
 				},
 				{
 					"name": "Screenshot 2020-09-15 at 14.17.56.png",
-					"alt": "Dit is een test",
+					"alt": "De Ride Out events pagina",
 					"src": "rideout",
 					"type": "website"
 				}
@@ -49,7 +49,7 @@
 		{
 			"name": "JAN©",
 			"pay-off": "Op JAN© kun je rekenen.",
-			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+			"description": "JAN© stelt je in staat om bezig te zijn met díe dingen waar jij ondernemer voor bent geworden. JAN© is meer dan een accountant of fiscalist. JAN© staat voor je klaar om ervoor te zorgen dat jij als ondernemer je zaken op orde hebt op het gebied van: administratie, belastingen, personeel, salarissen, recht, fusies & overnames en pensioen. Zo kan jij het beste uit je onderneming én uit jezelf halen.",
 			"client": {
 				"name": "JAN",
 				"link": "https://jan.nl/"
@@ -66,26 +66,26 @@
 			],
 			"images": [
 				{
-					"name": "joel-muniz-B8qIaoeKcfU-unsplash.jpg",
+					"name": "Jolanda-van-der-Maden-bril-kleiner.jpg",
 					"alt": "Dit is een test",
 					"src": "jan",
 					"type": "featured"
 				},
 				{
 					"name": "Screenshot 2020-09-16 at 15.09.56.png",
-					"alt": "Dit is een test",
+					"alt": "De JAN home pagina",
 					"src": "jan",
 					"type": "website"
 				},
 				{
 					"name": "Screenshot 2020-09-16 at 15.10.13.png",
-					"alt": "Dit is een test",
+					"alt": "De JAN home pagina, nieuws sectie",
 					"src": "jan",
 					"type": "website"
 				},
 				{
 					"name": "Screenshot 2020-09-16 at 15.10.25.png",
-					"alt": "Dit is een test",
+					"alt": "De JAN nieuws pagina",
 					"src": "jan",
 					"type": "website"
 				}

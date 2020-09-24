@@ -3,7 +3,7 @@
 		<div class="about__container">
 			<div data-aos="fade-up" data-aos-delay="300" class="about__content">
 				<h3 class="about__heading">
-					About.
+					Over.
 				</h3>
 				<p class="about__copy">
 					Ik ben Bas en ik maak websites. Met een passie voor
@@ -17,7 +17,7 @@
 			</div>
 			<div data-aos="fade-up" data-aos-delay="300" class="about__content">
 				<h4 class="about__sub-heading">
-					Studies
+					Studies &#x1F393
 				</h4>
 				<p class="about__date font-size--small">
 					2016-2020
@@ -51,7 +51,7 @@
 			</div>
 			<div data-aos="fade-up" data-aos-delay="300" class="about__content">
 				<h4 class="about__sub-heading">
-					Ervaring
+					Ervaring &#x1F454
 				</h4>
 				<p class="about__date font-size--small">
 					sep. 2019 - jul. 2020

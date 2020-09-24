@@ -1,5 +1,5 @@
 <template>
-	<header data-aos="fade-down" data-aos-delay="2000" class="header">
+	<header v-bind="headerBindings" class="header">
 		<router-link :to="'/'" class="header__link" @click.native="resetHeroState">
 			<div class="header__heading heading--h3 color--dark" v-html="getHeaderHeading"></div>
 		</router-link>
@@ -30,10 +30,21 @@ export default {
 	name: "Header",
 	data() {
 		return {
+			isMobile: false,
 			isProjectPage: false
 		}
 	},
 	computed: {
+		headerBindings() {
+			if (!this.isMobile) {
+				return {
+					"data-aos": "fade-down",
+					"data-aos-delay": "2000"
+				}
+			} else {
+				return {}
+			}
+		},
 		getHeaderHeading() {
 			return this.$store.state.header.heading
 		}
@@ -47,10 +58,20 @@ export default {
 			}
 		}
 	},
+	mounted() {
+		this.checkWindowSize()
+	},
 	methods: {
 		resetHeroState() {
 			this.$store.dispatch('resetHeroState')
 		},
+		checkWindowSize() {
+			let getViewportWidth = window.innerWidth
+
+			if (getViewportWidth <= 750) {
+				this.isMobile = true
+			}
+		}
 	}
 }
 </script>
