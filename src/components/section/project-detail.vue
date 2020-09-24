@@ -1,11 +1,11 @@
 <template>
 	<section class="project">
-		<div data-aos="fade-up" data-aos-delay="300" class="project__container">
+		<div v-bind="setDescriptionBindings" class="project__container">
 			<p class="project__copy">
 				{{ projectDescription }}
 			</p>
 		</div>
-		<div data-aos="fade-up" data-aos-delay="400" class="project__container">
+		<div v-bind="setContentBindings" class="project__container">
 			<div class="project__content">
 				<p class="project__type font-weight--bold">
 					Rol
@@ -31,7 +31,7 @@
 				</a>
 			</div>
 		</div>
-		<img v-for="image in projectImages" :key="image.index" data-aos="fade-up" data-aos-delay="300" :src="require(`../../static/images/${image.src}/${image.name}`).default" :alt="image.alt" class="project__image">
+		<img v-for="image in projectImages" :key="image.index" v-bind="setImageBindings" :src="require(`../../static/images/${image.src}/${image.name}`).default" :alt="image.alt" class="project__image">
 	</section>
 </template>
 
@@ -39,6 +39,36 @@
 export default {
 	name: "ProjectDetail",
 	computed: {
+		setDescriptionBindings() {
+			if (!this.$store.state.windowSize.isMobile) {
+				return {
+					"data-aos": "fade-up",
+					"data-aos-delay": "300"
+				}
+			} else {
+				return {}
+			}
+		},
+		setContentBindings() {
+			if (!this.$store.state.windowSize.isMobile) {
+				return {
+					"data-aos": "fade-up",
+					"data-aos-delay": "400"
+				}
+			} else {
+				return {}
+			}
+		},
+		setImageBindings() {
+			if (!this.$store.state.windowSize.isMobile) {
+				return {
+					"data-aos": "fade-up",
+					"data-aos-delay": "300"
+				}
+			} else {
+				return {}
+			}
+		},
 		projectDescription() {
 			return this.$store.state.project.description
 		},
@@ -70,6 +100,7 @@ export default {
 	padding: 10rem 12.5vw 0 12.5vw;
 	@media screen and (max-width: 750px) {
 		grid-template-columns: 1fr;
+		grid-gap: 2rem;
 		padding: 5rem 2rem 0 2rem;
 	}
 	&__content {

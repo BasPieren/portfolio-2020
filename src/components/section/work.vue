@@ -1,10 +1,10 @@
 <template>
 	<section id="work" class="work">
-		<h3 data-aos="fade-up" class="work__heading">
+		<h3 v-bind="setHeadingBindings" class="work__heading">
 			Werk.
 		</h3>
 		<div class="work__container">
-			<ProjectTile v-for="project in allProjects" :key="project.name" :project="project" data-aos="fade-up" data-aos-delay="300" />
+			<ProjectTile v-for="project in allProjects" :key="project.name" :project="project" v-bind="setProjectTileBindings" />
 		</div>
 	</section>
 </template>
@@ -21,6 +21,27 @@ export default {
 	data() {
 		return {
 			allProjects: json.work
+		}
+	},
+	computed: {
+		setHeadingBindings() {
+			if (!this.$store.state.windowSize.isMobile) {
+				return {
+					"data-aos": "fade-up",
+				}
+			} else {
+				return {}
+			}
+		},
+		setProjectTileBindings() {
+			if (!this.$store.state.windowSize.isMobile) {
+				return {
+					"data-aos": "fade-up",
+					"data-aos-delay": "300"
+				}
+			} else {
+				return {}
+			}
 		}
 	}
 }

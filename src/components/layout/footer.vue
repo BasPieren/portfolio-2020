@@ -1,10 +1,10 @@
 <template>
 	<footer id="footer" class="footer">
 		<div class="footer__container">
-			<p data-aos="fade-up" data-aos-delay="300" class="color--light">
+			<p v-bind="setContentBindings" class="color--light">
 				Heb jij een Front-end developer nodig? Stuur een berichtje, dan kunnen we een keer koffie drinken. &#x2615;
 			</p>
-			<a data-aos="fade-up" data-aos-delay="300" class="footer__email" href="mailto:bas.pieren@quicknet.nl">
+			<a v-bind="setContentBindings" class="footer__email" href="mailto:bas.pieren@quicknet.nl">
 				<svgicon name="envelope-solid" class="footer__icon svg-icon--medium"></svgicon>
 			</a>
 			<div class="footer__disclaimer">
@@ -21,7 +21,19 @@
 
 <script>
 export default {
-	name: "Footer"
+	name: "Footer",
+	computed: {
+		setContentBindings() {
+			if (!this.$store.state.windowSize.isMobile) {
+				return {
+					"data-aos": "fade-up",
+					"data-aos-delay": "300"
+				}
+			} else {
+				return {}
+			}
+		}
+	}
 }
 </script>
 
@@ -35,6 +47,7 @@ export default {
 	background-color: var(--folio-purple);
 	@media screen and (max-width: 750px) {
 		display: block;
+		margin: 5rem 0 0 0;
 		padding: 2rem;
 	}
 	&__email {

@@ -44,6 +44,9 @@ export default {
 .hero {
 	display: flex;
 	height: 100vh;
+	@media screen and (max-width: 750px) {
+		height: auto;
+	}
 	&__left {
 		position: relative;
 		display: flex;
@@ -56,8 +59,7 @@ export default {
 		clip-path: inset(0 100% 0 0);
 		animation: clipPathToRight 1.5s 0.4s ease forwards;
 		@media screen and (max-width: 750px) {
-			justify-content: center;
-			padding: 0 2rem;
+			padding: 5rem 2rem 0 2rem ;
 			width: 100%;
 			clip-path: inset(0 0 0 0);
 			animation: none;

@@ -6,11 +6,11 @@ const getDefaultState = () => {
 const state = getDefaultState()
 const actions = {
 	resetWindowState({ commit }) {
-		commit('resetState')
+		commit('resetWindowSizeState')
 	},
 }
 const mutations = {
-	resetState(state) {
+	resetWindowSizeState(state) {
 		Object.assign(state, getDefaultState())
 	},
 	setWindowSizeMobile(state) {

@@ -67,7 +67,7 @@ export default {
 	pointer-events: none;
 	z-index: 4;
 	@media screen and (max-width: 750px) {
-		justify-content: flex-start;
+		top: 0;
 		padding: 0;
 	}
 	&.small {
@@ -91,7 +91,6 @@ export default {
 		list-style-type: none;
 		transition: 0.4s;
 		@media screen and (max-width: 750px) {
-			margin: 2rem 0 0 0;
 			padding: 1rem;
 			height: 20vh;
 			background-color: var(--folio-purple);

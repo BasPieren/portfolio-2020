@@ -60,7 +60,8 @@ export default {
 	padding: 3.75rem 8vw;
 	z-index: 1;
 	@media screen and (max-width: 750px) {
-		padding: 2rem;
+		position: unset;
+		padding: 2rem 2rem 0 2rem;
 	}
 	&__link {
 		text-decoration: none;
