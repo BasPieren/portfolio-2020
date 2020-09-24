@@ -26,6 +26,8 @@ export default {
 		$route() {
 			if (this.$route.path !== '/') {
 				this.$store.commit('homeNotActive')
+			} else {
+				this.resetHeroState()
 			}
 		}
 	},
@@ -39,6 +41,9 @@ export default {
 			if (getViewportWidth <= 750) {
 				this.$store.commit('setWindowSizeMobile')
 			}
+		},
+		resetHeroState() {
+			this.$store.dispatch('resetHeroState')
 		}
 	}
 }

@@ -2,16 +2,16 @@
 	<section id="hero" class="hero">
 		<div class="hero__left">
 			<h2 class="hero__heading">
-				{{ heroHeading }}
+				{{ getHeroHeading }}
 			</h2>
-			<div class="hero__copy p" v-html="heroCopy"></div>
+			<div class="hero__copy p" v-html="getHeroCopy"></div>
 		</div>
-		<div :class="['hero__right', {'hero__gradient' : projectState}]">
+		<div :class="['hero__right', {'hero__gradient' : checkIfProjectIsActive}]">
 			<h2 class="hero__heading">
-				{{ heroHeading }}
+				{{ getHeroHeading }}
 			</h2>
 			<svgicon name="long-arrow-alt-down-solid" class="hero__icon svg-icon--normal"></svgicon>
-			<img v-if="projectState" :src="require(`../../static/images/${projectImages[0].src}/${projectImages[0].name}`).default" :alt="projectImages[0].alt" class="hero__image">
+			<img v-if="checkIfProjectIsActive" :src="require(`../../static/images/${getFeaturedProjectImage[0].src}/${getFeaturedProjectImage[0].name}`).default" :alt="getFeaturedProjectImage[0].alt" class="hero__image">
 		</div>
 	</section>
 </template>
@@ -20,16 +20,16 @@
 export default {
 	name: "Hero",
 	computed: {
-		heroHeading() {
+		getHeroHeading() {
 			return this.$store.state.hero.heading
 		},
-		heroCopy() {
+		getHeroCopy() {
 			return this.$store.state.hero.copy
 		},
-		projectState() {
+		checkIfProjectIsActive() {
 			return this.$store.state.project.isActive
 		},
-		projectImages() {
+		getFeaturedProjectImage() {
 			let getProjectImages = this.$store.state.project.images
 
 			return getProjectImages.filter(image => {

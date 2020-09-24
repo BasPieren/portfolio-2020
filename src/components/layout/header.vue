@@ -1,6 +1,6 @@
 <template>
-	<header v-bind="headerBindings" class="header">
-		<router-link :to="'/'" class="header__link" @click.native="resetHeroState">
+	<header v-bind="setHeaderBindings" class="header">
+		<router-link :to="'/'" class="header__link">
 			<div class="header__heading heading--h3 color--dark" v-html="getHeaderHeading"></div>
 		</router-link>
 		<nav :class="['header__nav', {'header__nav--hide': !checkIfHomeIsActive}]">
@@ -29,7 +29,7 @@
 export default {
 	name: "Header",
 	computed: {
-		headerBindings() {
+		setHeaderBindings() {
 			if (!this.$store.state.windowSize.isMobile) {
 				return {
 					"data-aos": "fade-down",
@@ -44,11 +44,6 @@ export default {
 		},
 		checkIfHomeIsActive() {
 			return this.$store.state.activeRoute.homeIsActive
-		}
-	},
-	methods: {
-		resetHeroState() {
-			this.$store.dispatch('resetHeroState')
 		}
 	}
 }
