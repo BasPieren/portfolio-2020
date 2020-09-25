@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import vuexPersistedState from "vuex-persistedstate"
 import windowSize from './modules/window-size'
 import activeRoute from './modules/route'
 import heroState from './modules/hero'
@@ -15,7 +16,10 @@ const store = new Vuex.Store({
 		hero: heroState,
 		header: headerState,
 		project: projectState
-	}
+	},
+	plugins: [
+		vuexPersistedState()
+	]
 })
 
 export default store
