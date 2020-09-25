@@ -10,7 +10,7 @@
 				{{ project['pay-off'] }}
 			</p>
 			<div class="project-tile__tags">
-				<p v-for="tag in project.tags" :key="tag" :class="['project-tile__tag', checkTagType(tag)]">
+				<p v-for="(tag, index) in project.tags" :key="index" :class="['project-tile__tag', checkTagType(tag)]">
 					{{ tag }}
 				</p>
 			</div>

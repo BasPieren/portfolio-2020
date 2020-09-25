@@ -1,12 +1,10 @@
 <template>
 	<section class="project">
 		<div v-bind="setDescriptionBindings" class="project__container">
-			<p class="project__copy">
-				{{ projectDescription }}
-			</p>
+			<div class="p project__copy" v-html="projectDescription"></div>
 		</div>
-		<div v-bind="setContentBindings" class="project__container">
-			<div class="project__content">
+		<div class="project__container">
+			<div v-bind="setContentBindings" class="project__content">
 				<p class="project__type font-weight--bold">
 					Rol
 				</p>
@@ -14,7 +12,7 @@
 					{{ projectRole }}
 				</p>
 			</div>
-			<div class="project__content">
+			<div v-bind="setContentBindings" class="project__content">
 				<p class="project__type font-weight--bold">
 					Klant
 				</p>
@@ -22,7 +20,7 @@
 					{{ projectClient.name }}
 				</a>
 			</div>
-			<div class="project__content">
+			<div v-bind="setContentBindings" class="project__content">
 				<p class="project__type font-weight--bold">
 					Agency
 				</p>
@@ -31,7 +29,7 @@
 				</a>
 			</div>
 		</div>
-		<img v-for="image in projectImages" :key="image.index" v-bind="setImageBindings" :src="require(`../../static/images/${image.src}/${image.name}`).default" :alt="image.alt" class="project__image">
+		<img v-for="(image, index) in projectImages" :key="index" v-bind="setImageBindings" :src="require(`../../static/images/${image.src}/${image.name}`).default" :alt="image.alt" class="project__image">
 	</section>
 </template>
 

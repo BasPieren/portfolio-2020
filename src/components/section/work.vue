@@ -4,7 +4,7 @@
 			Werk.
 		</h3>
 		<div class="work__container">
-			<ProjectTile v-for="project in allProjects" :key="project.name" :project="project" v-bind="setProjectTileBindings" />
+			<ProjectTile v-for="(project, index) in allProjects" :key="index" :project="project" v-bind="setProjectTileBindings" />
 		</div>
 	</section>
 </template>
