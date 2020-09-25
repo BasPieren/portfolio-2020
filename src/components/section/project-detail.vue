@@ -51,7 +51,7 @@ export default {
 			if (!this.$store.state.windowSize.isMobile) {
 				return {
 					"data-aos": "fade-up",
-					"data-aos-delay": "400"
+					"data-aos-delay": "600"
 				}
 			} else {
 				return {}
