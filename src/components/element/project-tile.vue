@@ -1,7 +1,7 @@
 <template>
 	<div class="project-tile">
 		<router-link :to="project.url" class="project-tile__link" @click.native="updateHeader(); updateHeroStore(project); updateActiveProject(project);"></router-link>
-		<img :src="require(`../../static/images/${project.images[0].src}/${project.images[0].name}`).default" :alt="project.images[0].alt" class="project-tile__image">
+		<img :src="require(`../../static/images/${project.visuals[0].src}/${project.visuals[0].name}`).default" :alt="project.visuals[0].alt" class="project-tile__image">
 		<h3 class="project-tile__title">
 			{{ project.name }}
 		</h3>

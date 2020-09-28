@@ -30,9 +30,9 @@ export default {
 			return this.$store.state.project.isActive
 		},
 		getFeaturedProjectImage() {
-			let getProjectImages = this.$store.state.project.images
+			let getProjectVisuals = this.$store.state.project.visuals
 
-			return getProjectImages.filter(image => {
+			return getProjectVisuals.filter(image => {
 				return image.type === 'featured'
 			})
 		}

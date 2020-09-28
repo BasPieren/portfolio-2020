@@ -53,6 +53,10 @@ module.exports = {
 				],
 			},
 			{
+				test: /\.mp4$/,
+				use: 'file-loader?name=videos/[name].[ext]',
+			},
+			{
 				test: /\.(woff|woff2|eot|ttf|otf)$/,
 				use: [
 					{

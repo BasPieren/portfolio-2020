@@ -18,7 +18,7 @@
 				"SCSS",
 				"Wordpress"
 			],
-			"images": [
+			"visuals": [
 				{
 					"name": "Ride-Out-1.jpg",
 					"alt": "Ride Out Amsterdam",
@@ -26,22 +26,21 @@
 					"type": "featured"
 				},
 				{
-					"name": "Screenshot 2020-09-15 at 14.17.15.png",
-					"alt": "De Ride Out home pagina",
+					"name": "ride-out-home-recording.mp4",
 					"src": "rideout",
-					"type": "website"
+					"type": "video"
 				},
 				{
 					"name": "Screenshot 2020-09-15 at 14.17.32.png",
 					"alt": "De Ride Out store pagina",
 					"src": "rideout",
-					"type": "website"
+					"type": "image"
 				},
 				{
 					"name": "Screenshot 2020-09-15 at 14.17.56.png",
 					"alt": "De Ride Out events pagina",
 					"src": "rideout",
-					"type": "website"
+					"type": "image"
 				}
 			],
 			"url": "rideout"
@@ -64,7 +63,7 @@
 				"SCSS",
 				"Wordpress"
 			],
-			"images": [
+			"visuals": [
 				{
 					"name": "Jolanda-van-der-Maden-bril-kleiner.jpg",
 					"alt": "Dit is een test",
@@ -75,19 +74,19 @@
 					"name": "Screenshot 2020-09-16 at 15.09.56.png",
 					"alt": "De JAN home pagina",
 					"src": "jan",
-					"type": "website"
+					"type": "image"
 				},
 				{
 					"name": "Screenshot 2020-09-16 at 15.10.13.png",
 					"alt": "De JAN home pagina, nieuws sectie",
 					"src": "jan",
-					"type": "website"
+					"type": "image"
 				},
 				{
 					"name": "Screenshot 2020-09-16 at 15.10.25.png",
 					"alt": "De JAN nieuws pagina",
 					"src": "jan",
-					"type": "website"
+					"type": "image"
 				}
 			],
 			"url": "jan"
@@ -114,12 +113,12 @@
 				"SCSS",
 				"Wordpress"
 			],
-			"images": [
+			"visuals": [
 				{
 					"name": "026-1024x683.jpg",
 					"alt": "Oliva Amsterdam",
 					"src": "oliva",
-					"type": "featured"
+					"type": "image"
 				}
 			],
 			"url": "oliva"

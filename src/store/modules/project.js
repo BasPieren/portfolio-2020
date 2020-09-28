@@ -7,7 +7,7 @@ const getDefaultState = () => {
 		client: '',
 		role: '',
 		agency: '',
-		images: []
+		visuals: []
 	}
 }
 const state = getDefaultState()
@@ -28,7 +28,7 @@ const mutations = {
 		state.client = payload.client
 		state.role = payload.role
 		state.agency = payload.agency
-		state.images = payload.images
+		state.visuals = payload.visuals
 	}
 }
 export default {

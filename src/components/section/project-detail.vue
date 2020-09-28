@@ -29,6 +29,7 @@
 				</a>
 			</div>
 		</div>
+		<video v-for="(video, index) in projectVideos" :key="index" v-bind="setImageBindings" :src="require(`../../static/videos/${video.src}/${video.name}`).default" class="project__video" autoplay muted loop playsinside></video>
 		<img v-for="(image, index) in projectImages" :key="index" v-bind="setImageBindings" :src="require(`../../static/images/${image.src}/${image.name}`).default" :alt="image.alt" class="project__image">
 	</section>
 </template>
@@ -79,11 +80,18 @@ export default {
 		projectAgency() {
 			return this.$store.state.project.agency
 		},
-		projectImages() {
-			let storeProjectImages = this.$store.state.project.images
+		projectVideos() {
+			let storeProjectVisuals = this.$store.state.project.visuals
 
-			return storeProjectImages.filter(image => {
-				return image.type !== 'featured'
+			return storeProjectVisuals.filter(image => {
+				return image.type === 'video'
+			})
+		},
+		projectImages() {
+			let storeProjectVisuals = this.$store.state.project.visuals
+
+			return storeProjectVisuals.filter(image => {
+				return image.type === 'image'
 			})
 		},
 	}
@@ -113,6 +121,7 @@ export default {
 	&__detail {
 		margin-top: 0.25rem;
 	}
+	&__video,
 	&__image {
 		grid-column-start: 1;
 		grid-column-end: 3;
