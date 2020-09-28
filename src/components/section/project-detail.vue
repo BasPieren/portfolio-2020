@@ -30,7 +30,7 @@
 			</div>
 		</div>
 		<div v-if="getProjectVisuals('video').length > 0" class="project__video-container">
-			<video v-for="(video, index) in getProjectVisuals('video')" :key="index" v-bind="setImageBindings" :src="require(`../../static/videos/${video.src}/${video.name}`).default" class="project__video" autoplay muted loop playsinside></video>
+			<video v-for="(video, index) in getProjectVisuals('video')" :key="index" v-bind="setImageBindings" :src="require(`../../static/videos/${video.src}/${video.name}`).default" class="project__video" muted loop playsinside></video>
 		</div>
 		<div v-if="getProjectVisuals('image').length > 0" class="project__image-container">
 			<img v-for="(image, index) in getProjectVisuals('image')" :key="index" v-bind="setImageBindings" :src="require(`../../static/images/${image.src}/${image.name}`).default" :alt="image.alt" class="project__image">
@@ -85,6 +85,9 @@ export default {
 			return this.$store.state.project.agency
 		}
 	},
+	mounted() {
+		window.addEventListener('scroll', this.checkVideoInView, false)
+	},
 	methods: {
 		getProjectVisuals(type) {
 			let projectVisuals = this.$store.state.project.visuals
@@ -92,6 +95,29 @@ export default {
 			return projectVisuals.filter(image => {
 				return image.type === type
 			})
+		},
+		checkVideoInView() {
+			const getAllVideoTags = document.getElementsByTagName("video")
+			const fraction = 0.6
+
+			for (let i = 0; i < getAllVideoTags.length; i++) {
+				let video = getAllVideoTags[i]
+
+				let x = video.offsetLeft, y = video.offsetTop, w = video.offsetWidth, h = video.offsetHeight, r = x + w
+				let	b = y + h
+				let	visibleX, visibleY, visible
+
+				visibleX = Math.max(0, Math.min(w, window.pageXOffset + window.innerWidth - x, r - window.pageXOffset))
+				visibleY = Math.max(0, Math.min(h, window.pageYOffset + window.innerHeight - y, b - window.pageYOffset))
+
+				visible = visibleX * visibleY / (w * h)
+
+				if (visible > fraction) {
+					video.play()
+				} else {
+					video.pause()
+				}
+			}
 		}
 	}
 }
