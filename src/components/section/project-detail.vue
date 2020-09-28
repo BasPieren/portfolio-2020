@@ -29,8 +29,12 @@
 				</a>
 			</div>
 		</div>
-		<video v-for="(video, index) in projectVideos" :key="index" v-bind="setImageBindings" :src="require(`../../static/videos/${video.src}/${video.name}`).default" class="project__video" autoplay muted loop playsinside></video>
-		<img v-for="(image, index) in projectImages" :key="index" v-bind="setImageBindings" :src="require(`../../static/images/${image.src}/${image.name}`).default" :alt="image.alt" class="project__image">
+		<div v-if="getProjectVisuals('video').length > 0" class="project__video-container">
+			<video v-for="(video, index) in getProjectVisuals('video')" :key="index" v-bind="setImageBindings" :src="require(`../../static/videos/${video.src}/${video.name}`).default" class="project__video" autoplay muted loop playsinside></video>
+		</div>
+		<div v-if="getProjectVisuals('image').length > 0" class="project__image-container">
+			<img v-for="(image, index) in getProjectVisuals('image')" :key="index" v-bind="setImageBindings" :src="require(`../../static/images/${image.src}/${image.name}`).default" :alt="image.alt" class="project__image">
+		</div>
 	</section>
 </template>
 
@@ -79,21 +83,16 @@ export default {
 		},
 		projectAgency() {
 			return this.$store.state.project.agency
-		},
-		projectVideos() {
-			let storeProjectVisuals = this.$store.state.project.visuals
+		}
+	},
+	methods: {
+		getProjectVisuals(type) {
+			let projectVisuals = this.$store.state.project.visuals
 
-			return storeProjectVisuals.filter(image => {
-				return image.type === 'video'
+			return projectVisuals.filter(image => {
+				return image.type === type
 			})
-		},
-		projectImages() {
-			let storeProjectVisuals = this.$store.state.project.visuals
-
-			return storeProjectVisuals.filter(image => {
-				return image.type === 'image'
-			})
-		},
+		}
 	}
 }
 </script>
@@ -121,17 +120,24 @@ export default {
 	&__detail {
 		margin-top: 0.25rem;
 	}
-	&__video,
-	&__image {
+	&__video-container,
+	&__image-container {
 		grid-column-start: 1;
 		grid-column-end: 3;
+		@media screen and (max-width: 750px) {
+			grid-column: unset;
+		}
+	}
+	&__video,
+	&__image {
+		margin: 0 0 4vw 0;
 		width: 100%;
 		box-shadow: 0 0 60px 0 rgba(158,158,165,.25);
 		&:last-of-type {
 			margin: 0;
 		}
 		@media screen and (max-width: 750px) {
-			grid-column: unset;
+			margin: 0 0 2rem 0;
 		}
 	}
 }

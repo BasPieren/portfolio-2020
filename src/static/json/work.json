@@ -31,16 +31,14 @@
 					"type": "video"
 				},
 				{
-					"name": "Screenshot 2020-09-15 at 14.17.32.png",
-					"alt": "De Ride Out store pagina",
+					"name": "ride-out-store-recording.mp4",
 					"src": "rideout",
-					"type": "image"
+					"type": "video"
 				},
 				{
-					"name": "Screenshot 2020-09-15 at 14.17.56.png",
-					"alt": "De Ride Out events pagina",
+					"name": "ride-out-menu-recording.mp4",
 					"src": "rideout",
-					"type": "image"
+					"type": "video"
 				}
 			],
 			"url": "rideout"
