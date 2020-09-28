@@ -24,8 +24,8 @@ const router = new VueRouter({
 			component: project
 		},
 		{
-			path: '/gyow',
-			name: 'gyow',
+			path: '/oliva',
+			name: 'oliva',
 			component: project
 		}
 	],
