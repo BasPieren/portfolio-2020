@@ -7,7 +7,6 @@ This is my personal portfolio website.
 
 ## Table of Contents 🗃
 * [Packages and Technologies](#packages-and-technologies)
-* [Sources](#sources-)
 * [Licence](#licence-)
 
 ## Packages and Technologies
@@ -21,15 +20,6 @@ This project makes use of the following packages and technologies:
   * [vue-svgicon](https://github.com/MMF-FE/svgicon/tree/master/packages/vue-svgicon)
   * [Webpack](https://webpack.js.org/)
   * [Animate on Scroll](http://michalsnik.github.io/aos/)
-
-## Sources 📚
-This is a list of all the sources I used during this project:
-
-  * None!
-
-### Honourable Mentions
-
-  * None!
 
 ## Licence 🔓
 MIT © [Bas Pieren](https://github.com/BasPieren)
