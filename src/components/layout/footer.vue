@@ -65,6 +65,14 @@ export default {
 				transform: scale(1.2);
 			}
 		}
+		@media screen and (max-width: 768px) {
+			width: 8vw;
+			height: 8vw;
+		}
+		@media screen and (max-width: 425px) {
+			width: 12vw;
+			height: 12vw;
+		}
 	}
 	&__icon {
 		width: 32px;
