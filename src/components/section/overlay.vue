@@ -66,7 +66,7 @@ export default {
 	transition: 0.4s;
 	pointer-events: none;
 	z-index: 4;
-	@media screen and (max-width: 750px) {
+	@media screen and (max-width: 768px) {
 		top: 0;
 		padding: 0;
 	}
@@ -90,7 +90,7 @@ export default {
 		height: 25vh;
 		list-style-type: none;
 		transition: 0.4s;
-		@media screen and (max-width: 750px) {
+		@media screen and (max-width: 768px) {
 			padding: 1rem;
 			height: 20vh;
 			background-color: var(--folio-purple);

@@ -45,7 +45,7 @@ export default {
 	margin: 10vw 0 0 0;
 	padding: 4vw 12.5vw;
 	background-color: var(--folio-purple);
-	@media screen and (max-width: 750px) {
+	@media screen and (max-width: 768px) {
 		display: block;
 		margin: 5rem 0 0 0;
 		padding: 2rem;

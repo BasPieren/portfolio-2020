@@ -135,13 +135,13 @@ export default {
 	grid-template-columns: 1fr 1fr;
 	grid-gap: 4vw;
 	padding: 10rem 12.5vw 0 12.5vw;
-	@media screen and (max-width: 750px) {
+	@media screen and (max-width: 768px) {
 		grid-template-columns: 1fr;
 		padding: 5rem 2rem 0 2rem;
 	}
 	&__content {
 		margin: 0 0 4vw 0;
-		@media screen and (max-width: 750px) {
+		@media screen and (max-width: 768px) {
 			margin: 0 0 2rem 0;
 		}
 		&:last-of-type {
@@ -162,7 +162,7 @@ export default {
 		top: 4vw;
 		width: 100%;
 		height: auto;
-		@media screen and (max-width: 750px) {
+		@media screen and (max-width: 768px) {
 			position: none;
 			top: 0;
 			margin: 2rem 0 0 0;

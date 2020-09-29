@@ -44,7 +44,7 @@ export default {
 .hero {
 	display: flex;
 	height: 100vh;
-	@media screen and (max-width: 750px) {
+	@media screen and (max-width: 768px) {
 		height: auto;
 	}
 	&__left {
@@ -58,7 +58,7 @@ export default {
 		overflow: hidden;
 		clip-path: inset(0 100% 0 0);
 		animation: clipPathToRight 1.5s 0.4s ease forwards;
-		@media screen and (max-width: 750px) {
+		@media screen and (max-width: 768px) {
 			padding: 5rem 2rem 0 2rem ;
 			width: 100%;
 			clip-path: inset(0 0 0 0);
@@ -67,7 +67,7 @@ export default {
 		.hero__heading {
 			right: 0;
 			transform: translate(50%, -50%);
-			@media screen and (max-width: 750px) {
+			@media screen and (max-width: 768px) {
 				position: unset;
 				top: unset;
 				right: unset;
@@ -84,7 +84,7 @@ export default {
 		overflow: hidden;
 		clip-path: inset(0 0 0 100%);
 		animation: clipPathToLeft 1.5s 0.4s ease forwards;
-		@media screen and (max-width: 750px) {
+		@media screen and (max-width: 768px) {
 			display: none;
 		}
 		.hero__heading {
@@ -115,7 +115,7 @@ export default {
 		white-space: nowrap;
 	}
 	&__copy {
-		@media screen and (max-width: 750px) {
+		@media screen and (max-width: 768px) {
 			margin-top: 1rem;
 		}
 	}

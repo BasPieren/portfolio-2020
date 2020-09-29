@@ -59,7 +59,7 @@ export default {
 	left: 0;
 	padding: 3.75rem 8vw;
 	z-index: 1;
-	@media screen and (max-width: 750px) {
+	@media screen and (max-width: 768px) {
 		position: unset;
 		padding: 2rem 2rem 0 2rem;
 	}
@@ -68,7 +68,7 @@ export default {
 	}
 	&__nav {
 		width: 25vw;
-		@media screen and (max-width: 750px) {
+		@media screen and (max-width: 768px) {
 			display: none;
 		}
 		&--hide {

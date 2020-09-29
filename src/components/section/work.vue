@@ -54,11 +54,11 @@ export default {
 	justify-content: center;
 	align-items: center;
 	padding: 10rem 0 0 0;
-	@media screen and (max-width: 750px) {
+	@media screen and (max-width: 768px) {
 		padding: 5rem 2rem 0 2rem;
 	}
 	&__heading {
-		@media screen and (max-width: 750px) {
+		@media screen and (max-width: 768px) {
 			align-self: flex-start;
 		}
 	}
@@ -68,7 +68,7 @@ export default {
 		width: 100%;
 		height: 80vh;
 		margin: 5rem 0 0 0;
-		@media screen and (max-width: 750px) {
+		@media screen and (max-width: 768px) {
 			grid-template-columns: 1fr;
 			grid-gap: 1rem;
 			margin: 0;
