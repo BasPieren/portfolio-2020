@@ -2,7 +2,7 @@
 
 This is my personal portfolio website.
 
-![Project Image](https://imgur.com/bK4kEXW)
+![Project Image](https://i.imgur.com/bK4kEXW.png)
 > baspieren.nl
 
 ## Table of Contents 🗃
