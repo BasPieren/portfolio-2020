@@ -69,22 +69,19 @@
 					"type": "featured"
 				},
 				{
-					"name": "Screenshot 2020-09-16 at 15.09.56.png",
-					"alt": "De JAN home pagina",
+					"name": "jan-home-recording.mp4",
 					"src": "jan",
-					"type": "image"
+					"type": "video"
 				},
 				{
-					"name": "Screenshot 2020-09-16 at 15.10.13.png",
-					"alt": "De JAN home pagina, nieuws sectie",
+					"name": "jan-diensten-recording.mp4",
 					"src": "jan",
-					"type": "image"
+					"type": "video"
 				},
 				{
-					"name": "Screenshot 2020-09-16 at 15.10.25.png",
-					"alt": "De JAN nieuws pagina",
+					"name": "jan-nieuws-recording.mp4",
 					"src": "jan",
-					"type": "image"
+					"type": "video"
 				}
 			],
 			"url": "jan"
@@ -116,7 +113,22 @@
 					"name": "026-1024x683.jpg",
 					"alt": "Oliva Amsterdam",
 					"src": "oliva",
-					"type": "image"
+					"type": "featured"
+				},
+				{
+					"name": "oliva-home-recording.mp4",
+					"src": "oliva",
+					"type": "video"
+				},
+				{
+					"name": "oliva-about-recording.mp4",
+					"src": "oliva",
+					"type": "video"
+				},
+				{
+					"name": "oliva-news-recording.mp4",
+					"src": "oliva",
+					"type": "video"
 				}
 			],
 			"url": "oliva"

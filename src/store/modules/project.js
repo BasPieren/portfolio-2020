@@ -7,6 +7,7 @@ const getDefaultState = () => {
 		client: '',
 		role: '',
 		agency: '',
+		collaboration: '',
 		visuals: []
 	}
 }
@@ -28,6 +29,7 @@ const mutations = {
 		state.client = payload.client
 		state.role = payload.role
 		state.agency = payload.agency
+		state.collaboration = payload.collaboration
 		state.visuals = payload.visuals
 	}
 }

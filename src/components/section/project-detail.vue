@@ -28,6 +28,14 @@
 					{{ projectAgency.name }}
 				</a>
 			</div>
+			<div v-if="projectCollaboration" v-bind="setContentBindings" class="project__content">
+				<p class="project__type font-weight--bold">
+					In samenwerking met
+				</p>
+				<a :href="projectCollaboration.link" target="_blank" class="p project__detail font-style--italic color--purple">
+					{{ projectCollaboration.name }}
+				</a>
+			</div>
 		</div>
 		<div v-if="getProjectVisuals('video').length > 0" class="project__video-container">
 			<video v-for="(video, index) in getProjectVisuals('video')" :key="index" v-bind="setImageBindings" :src="require(`../../static/videos/${video.src}/${video.name}`).default" class="project__video" muted loop playsinside></video>
@@ -83,6 +91,9 @@ export default {
 		},
 		projectAgency() {
 			return this.$store.state.project.agency
+		},
+		projectCollaboration() {
+			return this.$store.state.project.collaboration
 		}
 	},
 	mounted() {
