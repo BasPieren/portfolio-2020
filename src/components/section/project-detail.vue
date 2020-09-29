@@ -97,7 +97,9 @@ export default {
 		}
 	},
 	mounted() {
-		window.addEventListener('scroll', this.checkVideoInView, false)
+		if (!this.$store.state.windowSize.isMobile) {
+			window.addEventListener('scroll', this.checkVideoInView, false)
+		}
 	},
 	methods: {
 		getProjectVisuals(type) {
