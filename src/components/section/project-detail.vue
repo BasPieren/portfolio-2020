@@ -6,7 +6,7 @@
 		<div class="project__container">
 			<div v-bind="setContentBindings" class="project__content">
 				<p class="project__type font-weight--bold">
-					Rol
+					Mijn rol
 				</p>
 				<p class="project__detail font-style--italic">
 					{{ projectRole }}
@@ -14,7 +14,7 @@
 			</div>
 			<div v-bind="setContentBindings" class="project__content">
 				<p class="project__type font-weight--bold">
-					Klant
+					De klant
 				</p>
 				<a :href="projectClient.link" target="_blank" class="p project__detail font-style--italic color--purple">
 					{{ projectClient.name }}
@@ -157,6 +157,7 @@ export default {
 		margin-bottom: 0;
 	}
 	&__detail {
+		display: block;
 		margin-top: 0.25rem;
 	}
 	&__video-container,
