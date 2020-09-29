@@ -37,10 +37,10 @@
 				</a>
 			</div>
 		</div>
-		<div v-if="getProjectVisuals('video').length > 0" class="project__video-container">
+		<div v-if="getProjectVisuals('video').length > 0 && this.$store.state.windowSize.isMobile === false" class="project__video-container">
 			<video v-for="(video, index) in getProjectVisuals('video')" :key="index" v-bind="setImageBindings" :src="require(`../../static/videos/${video.src}/${video.name}`).default" class="project__video" muted loop playsinside></video>
 		</div>
-		<div v-if="getProjectVisuals('image').length > 0" class="project__image-container">
+		<div v-if="getProjectVisuals('image').length > 0 && this.$store.state.windowSize.isMobile === true" class="project__image-container">
 			<img v-for="(image, index) in getProjectVisuals('image')" :key="index" v-bind="setImageBindings" :src="require(`../../static/images/${image.src}/${image.name}`).default" :alt="image.alt" class="project__image">
 		</div>
 	</section>

@@ -26,6 +26,24 @@
 					"type": "featured"
 				},
 				{
+					"name": "ride-out-home-screenshot.png",
+					"alt": "Ride Out home pagina",
+					"src": "rideout",
+					"type": "image"
+				},
+				{
+					"name": "ride-out-store-screenshot.png",
+					"alt": "Ride Out store pagina",
+					"src": "rideout",
+					"type": "image"
+				},
+				{
+					"name": "ride-out-move-screenshot.png",
+					"alt": "Ride Out move pagina",
+					"src": "rideout",
+					"type": "image"
+				},
+				{
 					"name": "ride-out-home-recording.mp4",
 					"src": "rideout",
 					"type": "video"
@@ -67,6 +85,24 @@
 					"alt": "Dit is een test",
 					"src": "jan",
 					"type": "featured"
+				},
+				{
+					"name": "jan-home-screenshot.png",
+					"alt": "JAN home pagina",
+					"src": "jan",
+					"type": "image"
+				},
+				{
+					"name": "jan-diensten-screenshot.png",
+					"alt": "JAN diensten pagina",
+					"src": "jan",
+					"type": "image"
+				},
+				{
+					"name": "jan-nieuws-screenshot.png",
+					"alt": "JAN nieuws pagina",
+					"src": "jan",
+					"type": "image"
 				},
 				{
 					"name": "jan-home-recording.mp4",
@@ -114,6 +150,24 @@
 					"alt": "Oliva Amsterdam",
 					"src": "oliva",
 					"type": "featured"
+				},
+				{
+					"name": "oliva-home-screenshot.png",
+					"alt": "Oliva home pagina",
+					"src": "oliva",
+					"type": "image"
+				},
+				{
+					"name": "oliva-dinner-screenshot.png",
+					"alt": "Oliva dinner pagina",
+					"src": "oliva",
+					"type": "image"
+				},
+				{
+					"name": "oliva-nieuws-screenshot.png",
+					"alt": "Oliva nieuws pagina",
+					"src": "oliva",
+					"type": "image"
 				},
 				{
 					"name": "oliva-home-recording.mp4",
